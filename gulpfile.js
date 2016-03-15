@@ -5,10 +5,10 @@ var gulp    = require('gulp');
 var plumber = require("gulp-plumber");
 var sass    = require('gulp-ruby-sass');
 var csslint = require('gulp-csslint');
-var runSequence = require('run-sequence');
-var csslint = require('gulp-jshint');
+var jslint = require('gulp-jshint');
 var concat  = require("gulp-concat");
 var uglify  = require("gulp-uglify");
+var runSequence = require('run-sequence');
 
 var src = {
 	scss:  'src/scss/**/*.scss',
@@ -24,7 +24,6 @@ gulp.task('sass', function() {
 	.on('error', sass.logError)
 	.pipe(gulp.dest(src.css));
 });
-
 gulp.task('csslint', function() {
 	gulp.src(src.css)
 	.pipe(plumber())
@@ -39,14 +38,12 @@ gulp.task('jshint', function() {
 	.pipe($.jshint())
 	.pipe($.jshint.reporter('jshint-stylish'));
 });
-
 gulp.task('concat', function() {
 	return gulp.src(src.js)
 	.pipe(plumber())
 	.pipe(concat('all.js'))
 	.pipe(gulp.dest(src.js));
 });
-
 gulp.task('uglify', function() {
 	return gulp.src(src.alljs)
 	.pipe(plumber())
@@ -54,14 +51,16 @@ gulp.task('uglify', function() {
 	.pipe(rename({ extname: '.min.js' }))
 	.pipe(gulp.dest(src.js));
 });
-
 gulp.task('js', function(cb) {
 	runSequence('jshint', 'concat', 'uglify');
 });
 
-// default
-gulp.task('default', function() {
+// watch
+gulp.task('watch', function() {
 	gulp.watch(src.scss, ['sass']);
-	gulp.watch(src.scss, ['csslint']);
+	gulp.watch(src.css, ['csslint']);
 	gulp.watch(src.js, ['js']);
 });
+
+// default
+gulp.task('default', ['watch']);
