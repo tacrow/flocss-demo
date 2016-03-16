@@ -1,18 +1,21 @@
 #header {
 	position: relative;
-	padding: 15px;
+	height: 220px;
 	border-bottom: 1px solid #333333;
 }
 
 .header-logo {
 	display: block;
-	float: left;
-	margin-right: 15px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
 }
 
 .global-nav {
 	display: block;
-	float: left;
+	position: absolute;
+	top: 15px;
+	right: 15px;
 }
 
 .global-nav-lists {
