@@ -1,5 +1,20 @@
 #footer {
-	position: relative;
-	border: 1px solid #333333;
+	padding: 15px;
 	background-color: #cccccc;
+	box-sizing: border-box;
+}
+
+.footer-lists {
+	margin-bottom: 40px;
+	.footer-lists__item {
+		float: left;
+		margin-right: 10px;
+		a {
+			color: #333333;
+		}
+	}
+}
+
+.copyright {
+	text-align: center;
 }

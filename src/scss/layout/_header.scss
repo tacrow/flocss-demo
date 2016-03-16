@@ -1,5 +1,34 @@
 #header {
 	position: relative;
-	border: 1px solid #333333;
-	background-color: #cccccc;
+	padding: 15px;
+	border-bottom: 1px solid #333333;
+}
+
+.header-logo {
+	display: block;
+	float: left;
+	margin-right: 15px;
+}
+
+.global-nav {
+	display: block;
+	float: left;
+}
+
+.global-nav-lists {
+	.global-nav-lists__item {
+		display: block;
+		float: left;
+		border-radius: 3px;
+		a {
+			padding: 8px 15px;
+			color: #333333;
+		}
+		&.is-active {
+			background-color: #cfcfcf;
+		}
+		&.is-active span {
+			font-weight: bold;
+		}
+	}
 }
