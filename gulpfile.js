@@ -3,7 +3,9 @@
  */
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var del = require('del');
 var sass = require('gulp-ruby-sass');
+var runSequence = require('run-sequence');
 
 var src = {
 	scss:  'src/scss/**/*.scss',
@@ -13,6 +15,11 @@ var src = {
 	alljs: 'src/js/all_js/all.js',
 	destjs:'src/js/all_js/',
 }
+
+//clean
+gulp.task('clean', function(callback) {
+	return del([src.css, src.destjs], callback);
+});
 
 // css task
 gulp.task('sass', function() {
@@ -50,7 +57,7 @@ gulp.task('uglify', function() {
 	return gulp.src(src.alljs)
 	.pipe($.plumber())
 	.pipe($.uglify({ preserveComments: 'some' }))
-	.pipe($.rename('all.min.js'))
+	.pipe($.rename({ suffix: '.min' }))
 	.pipe(gulp.dest(src.destjs));
 });
 
@@ -66,7 +73,7 @@ gulp.task('watch', function() {
 
 // build
 gulp.task('build', function(callback) {
-	runSequence('sass', ['csslint', 'cssmin'], 'jshint', ['concat', 'uglify'], callback);
+	runSequence('clean', 'sass', 'csslint', 'cssmin', 'jshint', 'concat', 'uglify', callback);
 });
 
 // default

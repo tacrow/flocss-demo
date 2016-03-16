@@ -13,6 +13,7 @@
   "author": "t-yamauchi",
   "license": "MIT",
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-csslint": "^0.2.2",

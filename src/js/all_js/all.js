@@ -1,6 +1,5 @@
 (function() {
 	console.log('common.js');
-	
 })();
 
 (function() {
