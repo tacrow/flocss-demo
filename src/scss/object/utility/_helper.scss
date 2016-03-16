@@ -2,7 +2,7 @@
 /* 
  * typography
  */
-.fs5 { font-size: 9px; }
+.fs5 { font-size: 5px; }
 .fs10 { font-size: 10px; }
 .fs11 { font-size: 11px; }
 .fs12 { font-size: 12px; }
@@ -25,50 +25,6 @@
 .bottom { vertical-align: bottom; }
 .baseline { vertical-align: baseline; }
 .textBottom { vertical-align: text-bottom; }
-
-.lh1 { line-height: 1; }
-.lh2 { line-height: 2; }
-
-.ls0 { letter-spacing: 0; }
-.ls1 { letter-spacing: 1; }
-.ls2 { letter-spacing: 2; }
-
-/*
- * color scheme
- */
-.white { color: #ffffff; }
-
-/*
- * position
- */
-.relative { position: relative; }
-.absolute { position: absolute; }
-
-/*
- * display
- */
-.flexbox {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: flex;
-}
-.table {
-	display: table;
-	table-layout: fixed;
-	position: relative;
-}
-.row { display: table-row; }
-.cell { display: table-cell; }
-.inline { display: inline; }
-.inlineBlock { display: inline-block; }
-
-/*
- * state
- */
-.block { display: block; }
-.none { display: none; }
-.disabled { background-color: #999999; }
-.hidden { visibility: hidden; }
 
 /*
  * spase
@@ -231,8 +187,34 @@
 	margin-left: 20px;
 	margin-right: 20px;
 }
-
 .mhAuto { margin: 0 auto; }
+
+/*
+ * display
+ */
+.table {
+	display: table;
+	table-layout: fixed;
+	position: relative;
+}
+.row { display: table-row; }
+.cell { display: table-cell; }
+.inline { display: inline; }
+.inlineBlock { display: inline-block; }
+
+/*
+ * state
+ */
+.block { display: block; }
+.none { display: none; }
+.hidden { visibility: hidden; }
+
+/*
+ * position
+ */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
 
 /*
  * dimension
@@ -258,13 +240,38 @@
 .h200 { height: 200px; }
 
 /*
- * misc
+ * mediaFloat
  */
-.floatLeft { float: left; }
-.floatRight { float: right; }
-.floatNo { float: none; }
+.mdFlt { overflow: hidden; }
+.mdFlt .mdL { float: left; }
+.mdFlt .mdR { float: right; }
 
-.radiusNone { border-radius: 0; }
+.mdFlt .mdL img,
+.mdFlt .mdR img {
+	display: block;
+}
+
+.mdFlt .otL, .mdFlt .otR { overflow: hidden; }
+
+/*
+ * clearfix
+ */
+.cf:before,
+.cf:after {
+	content: "";
+	display: table;
+}
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*
+ * Image replacement
+ */
+.ir {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
 
 /*
  * rotate
@@ -272,19 +279,11 @@
 .trsfR180 {
 	-webkit-transform: rotate(-180deg);
 	-moz-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
 	-ms-transform: rotate(-180deg);
 	transform: rotate(-180deg);
 }
 
-/*
- * ## non-semantic helper classes
- * Please define your styles before this section.
-*/
-.backfaceHidden {
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
 .overflowHidden {
 	text-overflow: clip;
 	white-space: nowrap;
@@ -306,89 +305,13 @@
 /*
  * A hack for HTML5 contenteditable attribute on mobile
  */
-textarea[contenteditable] { -webkit-appearance: none; }
-
-/*
- * Image replacement
- */
-.ir {
-	border: 0;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent !important;
-	background-color: transparent;
-}
-.ir a {
-	border: 0 !important;
-	font: 0/0 a !important;
-	text-shadow: none !important;
-	color: transparent !important;
-	background-color: transparent !important;
-}
-
-/*
- * alternateText
- */
-.altT {
-	display: inline-block;
-	height: 0;
-	width: 0;
-	overflow: hidden;
-	position: absolute;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders:h5bp.com/v
- */
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable * when navigated to via the keyboard:h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-	clip: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	position: static;
-	width: auto;
+textarea[contenteditable] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
 .invisible { visibility: hidden; }
-
-/*
- * mediaFloat
- */
-.mdFlt { overflow: hidden; }
-.mdFlt .mdL { float: left; }
-.mdFlt .mdR { float: right; }
-
-.mdFlt .mdL img,
-.mdFlt .mdR img {
-	display: block;
-}
-
-.mdFlt .otL, .mdFlt .otR { overflow: hidden; }
-
-/*
- * form reset
- */
-textarea, input {
-	-webkit-transform: none !important;
-	-moz-transform: none !important;
-	-ms-transform: none !important;
-	transform: none !important;
-}

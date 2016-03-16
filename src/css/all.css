@@ -18,6 +18,7 @@ audio:not([controls]) {
 html {
   font-family: Helvetica, 'Droid Sans', 'Hiragino Kaku Gothic Pro', sans-serif;
   -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -27,15 +28,6 @@ body {
 
 a {
   background-color: transparent;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:active,
-a:hover {
-  outline: 0;
 }
 
 abbr[title] {
@@ -134,6 +126,7 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
+  -moz-appearance: button;
   cursor: pointer;
 }
 
@@ -165,12 +158,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-appearance: textfield;
   box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 fieldset {
@@ -202,9 +197,9 @@ td, th {
 }
 
 /*
- * base.css
- */
-h1, h2, h3, h4, h5, h6, div, p, ul, ol, dl, dt, dd {
+* base.css
+*/
+div, p, ul, ol, dl, dt, dd {
   margin: 0;
   padding: 0;
   word-break: break-all;
@@ -228,9 +223,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-  touch-callout: none;
 }
 
 textarea,
@@ -242,6 +235,7 @@ input[type="number"],
 input[type="search"],
 select {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   padding: 4px 10px 5px;
   color: #82828c;
@@ -254,7 +248,6 @@ select {
 
 button {
   -webkit-touch-callout: none;
-  touch-callout: none;
 }
 
 body,
@@ -305,6 +298,8 @@ img {
   border: 0;
   vertical-align: middle;
   -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -322,43 +317,14 @@ img {
   vertical-align: middle;
 }
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* clearfix */
-.cf:before,
-.cf:after {
-  content: "";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-}
-
-/* rock */
-.lock {
-  overflow: hidden;
-  height: auto;
-}
-
 /* 画面タップ時のちらつき対策 */
 #TapHelper {
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
 }
 
 #header {
   position: relative;
+  border: 1px solid #333333;
   background-color: #cccccc;
 }
 
@@ -378,7 +344,7 @@ img {
  * typography
  */
 .fs5 {
-  font-size: 9px;
+  font-size: 5px;
 }
 
 .fs10 {
@@ -451,94 +417,6 @@ img {
 
 .textBottom {
   vertical-align: text-bottom;
-}
-
-.lh1 {
-  line-height: 1;
-}
-
-.lh2 {
-  line-height: 2;
-}
-
-.ls0 {
-  letter-spacing: 0;
-}
-
-.ls1 {
-  letter-spacing: 1;
-}
-
-.ls2 {
-  letter-spacing: 2;
-}
-
-/*
- * color scheme
- */
-.white {
-  color: #ffffff;
-}
-
-/*
- * position
- */
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-/*
- * display
- */
-.flexbox {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-}
-
-.table {
-  display: table;
-  table-layout: fixed;
-  position: relative;
-}
-
-.row {
-  display: table-row;
-}
-
-.cell {
-  display: table-cell;
-}
-
-.inline {
-  display: inline;
-}
-
-.inlineBlock {
-  display: inline-block;
-}
-
-/*
- * state
- */
-.block {
-  display: block;
-}
-
-.none {
-  display: none;
-}
-
-.disabled {
-  background-color: #999999;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 /*
@@ -953,6 +831,61 @@ img {
 }
 
 /*
+ * display
+ */
+.table {
+  display: table;
+  table-layout: fixed;
+  position: relative;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+}
+
+.inline {
+  display: inline;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+/*
+ * state
+ */
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*
+ * position
+ */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/*
  * dimension
  */
 .fill {
@@ -1024,22 +957,53 @@ img {
 }
 
 /*
- * misc
+ * mediaFloat
  */
-.floatLeft {
+.mdFlt {
+  overflow: hidden;
+}
+
+.mdFlt .mdL {
   float: left;
 }
 
-.floatRight {
+.mdFlt .mdR {
   float: right;
 }
 
-.floatNo {
-  float: none;
+.mdFlt .mdL img,
+.mdFlt .mdR img {
+  display: block;
 }
 
-.radiusNone {
-  border-radius: 0;
+.mdFlt .otL, .mdFlt .otR {
+  overflow: hidden;
+}
+
+/*
+ * clearfix
+ */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*
+ * Image replacement
+ */
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /*
@@ -1048,18 +1012,9 @@ img {
 .trsfR180 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
-}
-
-/*
- * ## non-semantic helper classes
- * Please define your styles before this section.
-*/
-.backfaceHidden {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .overflowHidden {
@@ -1091,63 +1046,8 @@ img {
  */
 textarea[contenteditable] {
   -webkit-appearance: none;
-}
-
-/*
- * Image replacement
- */
-.ir {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent !important;
-  background-color: transparent;
-}
-
-.ir a {
-  border: 0 !important;
-  font: 0/0 a !important;
-  text-shadow: none !important;
-  color: transparent !important;
-  background-color: transparent !important;
-}
-
-/*
- * alternateText
- */
-.altT {
-  display: inline-block;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders:h5bp.com/v
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable * when navigated to via the keyboard:h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /*
@@ -1155,38 +1055,4 @@ textarea[contenteditable] {
  */
 .invisible {
   visibility: hidden;
-}
-
-/*
- * mediaFloat
- */
-.mdFlt {
-  overflow: hidden;
-}
-
-.mdFlt .mdL {
-  float: left;
-}
-
-.mdFlt .mdR {
-  float: right;
-}
-
-.mdFlt .mdL img,
-.mdFlt .mdR img {
-  display: block;
-}
-
-.mdFlt .otL, .mdFlt .otR {
-  overflow: hidden;
-}
-
-/*
- * form reset
- */
-textarea, input {
-  -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -ms-transform: none !important;
-  transform: none !important;
 }

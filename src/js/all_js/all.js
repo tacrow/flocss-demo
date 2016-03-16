@@ -4,7 +4,6 @@
 
 (function() {
 	console.log('search.js');
-	
 })();
 
 (function() {
