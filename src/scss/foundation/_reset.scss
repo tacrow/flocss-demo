@@ -10,10 +10,6 @@ audio:not([controls]) {
 	display: none;
 	height: 0;
 }
-[hidden],
-template {
-	display: none;
-}
 html {
 	font-family: Helvetica, 'Droid Sans', 'Hiragino Kaku Gothic Pro', sans-serif;
 	-webkit-text-size-adjust: 100%;
