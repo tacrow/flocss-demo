@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*
+ * object/project/_gallery.scss
+ */
+
+// top gallery
+.p-gallery-lists {
+	.p-gallery-lists__item {
+		float: left;
+		width: 24%;
+		margin-right: 1%;
+		margin-bottom: 10px;
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+}

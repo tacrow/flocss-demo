@@ -2,7 +2,10 @@
 /*
  * object/layout/_main.scss
  */
-#l-main {
+#main {
 	float: right;
-	width: 80%;
+	width: 79.5%;
+	padding: 10px;
+	border: 1px solid #dfdfdf;
+	box-sizing: border-box;
 }

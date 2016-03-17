@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+ * object/component/_media.scss
+ */
+
+.c-media-item {
+	border: 1px solid #dfdfdf;
+	box-sizing: border-box;
+	.c-media-item__img {
+		width: 100%;
+	}
+	.c-media-item__body {
+		padding: 10px;
+		.title {
+			margin-bottom: 5px;
+			@include font14;
+			font-weight: bold;
+		}
+		.text {
+			min-height: 70px;
+			margin-bottom: 10px;
+			@include font12;
+		}
+		.link {
+			text-align: right;
+		}
+		.btn {
+
+		}
+	}
+}

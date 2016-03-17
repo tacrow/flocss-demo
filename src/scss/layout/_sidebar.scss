@@ -2,7 +2,10 @@
 /*
  * object/layout/_sidebar.scss
  */
-#l-sidebar {
+#sidebar {
 	float: left;
-	width: 20%;
+	width: 19.5%;
+	padding: 10px;
+	border: 1px solid #dfdfdf;
+	box-sizing: border-box;
 }

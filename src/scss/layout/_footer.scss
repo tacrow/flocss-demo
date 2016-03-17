@@ -1,25 +1,9 @@
 @charset "utf-8";
 /*
- * object/layout/_footer.scss
+ * layout/_footer.scss
  */
-#l-footer {
+#footer {
 	padding: 15px;
-	background-color: #cccccc;
+	border-top: 1px solid #dfdfdf;
 	box-sizing: border-box;
 }
-
-.footer-lists {
-	margin-bottom: 40px;
-	.footer-lists__item {
-		float: left;
-		margin-right: 10px;
-		a {
-			color: #333333;
-		}
-	}
-}
-
-.copyright {
-	text-align: center;
-}
-

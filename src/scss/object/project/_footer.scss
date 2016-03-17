@@ -1,0 +1,18 @@
+@charset "utf-8";
+/*
+ * object/project/_footer.scss
+ */
+.p-footer-lists {
+	margin-bottom: 40px;
+	.p-footer-lists__item {
+		float: left;
+		margin-right: 10px;
+		a {
+			color: #333333;
+		}
+	}
+}
+
+.p-copyright {
+	text-align: center;
+}

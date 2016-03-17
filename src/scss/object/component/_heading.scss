@@ -1,0 +1,9 @@
+@charset "utf-8";
+/*
+ * object/component/_heading.scss
+ */
+.c-heading {
+	margin-bottom: 10px;
+	@include font18;
+	font-weight: bold;
+}

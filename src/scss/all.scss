@@ -3,10 +3,17 @@
 // ===============================================================
 // Foundation
 // ===============================================================
-
-@import "foundation/reset";
-@import "foundation/base";
 @import "foundation/mixins";
+
+// --------------------------------------------
+// Reset
+// --------------------------------------------
+@import "foundation/reset";
+
+// --------------------------------------------
+// Base
+// --------------------------------------------
+@import "foundation/base";
 
 // ===============================================================
 // Layout
@@ -26,14 +33,18 @@
 // --------------------------------------------
 // Component
 // --------------------------------------------
-
 @import "object/component/button";
+@import "object/component/heading";
+@import "object/component/label";
+@import "object/component/media";
 
 // --------------------------------------------
 // Project
 // --------------------------------------------
-
+@import "object/project/header";
+@import "object/project/footer";
 @import "object/project/news";
+@import "object/project/gallery";
 
 // --------------------------------------------
 // Utility

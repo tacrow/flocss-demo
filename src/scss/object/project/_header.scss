@@ -1,0 +1,48 @@
+@charset "utf-8";
+/*
+ * object/project/_header.scss
+ */
+.p-header-logo {
+	display: block;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	width: 141px;
+	height: 22px;
+	@include bg-img('logo.png');
+	background-repeat: no-repeat;
+}
+
+.p-header-nav {
+	display: block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.p-header-nav-lists {
+	.p-header-nav-lists__item {
+		display: block;
+		float: left;
+		background-color: #ffffff;
+		a {
+			padding: 8px 15px;
+			color: #333333;
+			&:hover {
+				background-color: #dfdfdf;
+			}
+		}
+		&:first-child {
+			border-radius: 3px 0 0 3px;
+		}
+		&:last-child {
+			border-radius: 0 3px 3px 0;
+		}
+		&.is-active {
+			background-color: #dfdfdf;
+		}
+		&.is-active span {
+			font-weight: bold;
+		}
+	}
+}

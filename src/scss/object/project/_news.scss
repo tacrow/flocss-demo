@@ -1,32 +1,29 @@
 @charset "utf-8";
 /*
- * object/project/news.scss
+ * object/project/_news.scss
  */
 .p-news {
-	margin: 10px 0;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #dfdfdf;
 }
 
 .p-news-title {
-	float: left;
-	width: 15%;
+	margin-bottom: 8px;
 	.p-news-title__logo {
 	}
 }
 
 .p-news-lists {
-	float: left;
-	width: 85%;
 	.p-news-lists__item {
 		margin-bottom: 10px;
-		.notice {
-				
-		}
 		.date {
 			display: inline-block;
 			margin-right: 10px;
-			padding: 3px 5px 2px;
-			border-radius: 3px;
-			background-color: #cccccc;
+		}
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

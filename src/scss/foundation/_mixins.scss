@@ -7,7 +7,7 @@
  * background-image base-path
  */
 @mixin bg-img($path) {
-	background-image: url("src/img/"+$path);
+	background-image: url("../img/"+$path);
 }
 
 /*

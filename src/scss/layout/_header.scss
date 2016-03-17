@@ -1,41 +1,13 @@
 @charset "utf-8";
 /*
- * object/layout/_header.scss
+ * layout/_header.scss
  */
-#l-header {
+#header {
 	position: relative;
-	height: 220px;
-	border-bottom: 1px solid #333333;
-}
-
-.header-logo {
-	display: block;
-	position: absolute;
-	top: 15px;
-	left: 15px;
-}
-
-.global-nav {
-	display: block;
-	position: absolute;
-	top: 15px;
-	right: 15px;
-}
-
-.global-nav-lists {
-	.global-nav-lists__item {
-		display: block;
-		float: left;
-		border-radius: 3px;
-		a {
-			padding: 8px 15px;
-			color: #333333;
-		}
-		&.is-active {
-			background-color: #cfcfcf;
-		}
-		&.is-active span {
-			font-weight: bold;
-		}
-	}
+	height: 450px;
+	border-bottom: 1px solid #dfdfdf;
+	@include bg-img('kv.png');
+	background-repeat: no-repeat;
+	background-clip: padding-box;
+	background-clip: padding;
 }
