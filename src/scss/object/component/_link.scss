@@ -10,8 +10,8 @@
 	&:before {
 		content: '';
 		display: inline-block;
-		width: 7px;
-		height: 9px;
+		width: 5px;
+		height: 5px;
 		margin-right: 3px;
 		@include bg-img('arrow.png');
 		background-repeat: no-repeat;
