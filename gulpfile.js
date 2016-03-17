@@ -64,7 +64,7 @@ gulp.task('uglify', function() {
 // watch
 gulp.task('watch', function() {
 	gulp.watch(src.scss, ['sass']);
-	gulp.watch(src.allcss, ['csslint']);
+	// gulp.watch(src.allcss, ['csslint']);
 	gulp.watch(src.allcss, ['cssmin']);
 	gulp.watch(src.js, ['jshint']);
 	gulp.watch(src.js, ['concat']);

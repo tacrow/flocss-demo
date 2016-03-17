@@ -1,20 +1,24 @@
+@charset "utf-8";
+/*
+ * object/layout/_core.scss
+ */
 html,
 body {
 	position: relative;
 	min-height: 100%;
 }
 
-#wrap {
+#l-wrap {
 	position: relative;
 	width: 100%;
 	min-height: 100%;
 }
 
-#content {
+#l-content {
 	padding-bottom: 100px;
 }
 
-#footer {
+#l-footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;

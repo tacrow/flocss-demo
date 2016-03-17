@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+ * object/utility/_display.scss
+ */
+.u-table {
+	display: table;
+	table-layout: fixed;
+	position: relative;
+}
+.u-row {
+	display: table-row;
+}
+.u-cell {
+	display: table-cell;
+}
+.u-inline {
+	display: inline;
+}
+.u-inlineBlock {
+	display: inline-block;
+}

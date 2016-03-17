@@ -4,19 +4,20 @@
 // Foundation
 // ===============================================================
 
-@import "foundation/_reset";
-@import "foundation/_base";
+@import "foundation/reset";
+@import "foundation/base";
+@import "foundation/mixins";
 
 // ===============================================================
 // Layout
 // ===============================================================
 
-@import "layout/_core";
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_content";
-@import "layout/_main";
-@import "layout/_sidebar";
+@import "layout/core";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/content";
+@import "layout/main";
+@import "layout/sidebar";
 
 // ===============================================================
 // Object
@@ -26,17 +27,24 @@
 // Component
 // --------------------------------------------
 
-@import "object/component/_button";
+@import "object/component/button";
 
 // --------------------------------------------
 // Project
 // --------------------------------------------
 
-@import "object/project/_news";
+@import "object/project/news";
 
 // --------------------------------------------
 // Utility
 // --------------------------------------------
-@import "object/utility/_typography";
-@import "object/utility/_space";
-@import "object/utility/_helper";
+@import "object/utility/typography";
+@import "object/utility/dimension";
+@import "object/utility/spaces";
+@import "object/utility/display";
+@import "object/utility/position";
+@import "object/utility/state";
+@import "object/utility/media_float";
+@import "object/utility/clearfix";
+@import "object/utility/img_replacement";
+@import "object/utility/misc";

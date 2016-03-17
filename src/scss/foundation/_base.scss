@@ -1,7 +1,19 @@
 @charset "utf-8";
 /*
-* base.css
+* foundation/base.css
 */
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #ffffff;
+	color: #333333;
+	font-size: 11px;
+	font-size: 1.1rem;
+}
 h1, h2, h3, h4, h5, h6, div, p, ul, ol, dl, dt, dd {
 	margin: 0;
 	padding: 0;
@@ -25,6 +37,31 @@ a:focus {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-touch-callout: none;
 }
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+}
+tr {
+	display: table-row;
+	position: relative;
+	vertical-align: middle;
+}
+td, th {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0;
+}
+img {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	max-width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+}
 textarea,
 input[type="text"],
 input[type="email"],
@@ -37,66 +74,17 @@ select {
 	-moz-appearance: none;
 	appearance: none;
 	padding: 4px 10px 5px;
-	color: #82828c;
-	font-size: 13px;
 	background-color: #ffffff;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
 	border-radius: 0;
+	color: #82828c;
+	font-size: 10px;
+	font-size: 1.0rem;
 }
-button { -webkit-touch-callout: none; }
-body,
-.btn_gray,
-.btn_yellow,
-.read_more {
-	font-size: 12px;
-}
-.em {
-	color: #CC0000;
-	font-weight: 700;
-}
-html { height: 100%; }
-body {
-	padding: 0;
-	margin: 0;
-	background: #FFFFFF;
-	height: 100%;
-	line-height: 1.4;
-	color: #262626;
-}
-tbody {
-	display: table-row-group;
-	vertical-align: middle;
-	border-color: inherit;
-}
-tr {
-	display: table-row;
-	position: relative;
-	vertical-align: inherit;
-	border-color: inherit;
-}
-td, th {
-	display: table-cell;
-	vertical-align: inherit;
-	padding: 0;
-}
-img {
-	border: 0;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-img {
-	max-width: 100%;
-	height: auto;
-}
-img { -ms-interpolation-mode: bicubic; }
-img {
-	display: inline-block;
-	vertical-align: middle;
+button {
+	-webkit-touch-callout: none;
 }
 
 /* 画面タップ時のちらつき対策 */
-#TapHelper { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.TapHelper {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

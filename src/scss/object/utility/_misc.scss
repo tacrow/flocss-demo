@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*
+ * object/utility/misc.scss
+ */
+
+/*
+ * rotate
+ */
+.u-trsfR180 {
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+
+.u-overflowHidden {
+	text-overflow: clip;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.u-ellipsis {
+    overflow: hidden;
+	white-space: nowrap;
+	-webkit-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+.u-breakAll { word-break: break-all; }
+
+/*
+ * prevent callout
+ */
+.u-nocallout { -webkit-touch-callout: none; }
+
+/*
+ * A hack for HTML5 contenteditable attribute on mobile
+ */
+textarea[contenteditable] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.u-invisible { visibility: hidden; }

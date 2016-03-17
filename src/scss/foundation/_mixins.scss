@@ -1,0 +1,97 @@
+@charset "utf-8";
+/*
+ * foundation/_mixins.scss
+ */
+
+/*
+ * background-image base-path
+ */
+@mixin bg-img($path) {
+	background-image: url("src/img/"+$path);
+}
+
+/*
+ * color
+ */
+$txt-base-color: #333333;
+
+$link-base-color: #dfdfdf;
+
+$bg-base-color: #cccccc;
+
+/*
+ * font-size
+ */
+$font-size-base-px: 11px;
+$font-size-base-rem: 1.1rem;
+
+@mixin font($font-size:$font-size-base-px) {
+	font-size: $font-size;
+	font-size: ($font-size / 10)rem;
+}
+@mixin font-base {
+	font-size: $font-size-base-px;
+	font-size: $font-size-base-rem;
+}
+@mixin font8 {
+	font-size: 8px;
+	font-size: .8rem;
+}
+@mixin font9 {
+	font-size: 9px;
+	font-size: .9rem;
+}
+@mixin font10 {
+	font-size: 1px;
+	font-size: 1rem;
+}
+@mixin font11 {
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+@mixin font12 {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+@mixin font13 {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+@mixin font14 {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+@mixin font15 {
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+@mixin font16 {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+@mixin font17 {
+	font-size: 17px;
+	font-size: 1.7rem;
+}
+@mixin font18 {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+@mixin font20 {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+/*
+ * box-shadow
+ */
+@mixin box-shadow($color) {
+	-webkit-box-shadow: 0 1px 2px $color;
+	-moz-box-shadow: 0 1px 2px $color;
+	box-shadow: 0 1px 2px $color;
+}
+@mixin box-shadow-base {
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}

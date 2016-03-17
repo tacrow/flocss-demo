@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+ * object/utility/_media_float.scss
+ */
+.u-mdFlt {
+	overflow: hidden;
+}
+.u-mdFlt .u-mdL {
+	float: left;
+}
+.u-mdFlt .u-mdR {
+	float: right;
+}
+.mdFlt .mdL img,
+.mdFlt .mdR img {
+	display: block;
+}
+.u-mdFlt .u-otL,
+.u-mdFlt .u-otR {
+	overflow: hidden;
+}

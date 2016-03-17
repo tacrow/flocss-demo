@@ -1,4 +1,8 @@
-#footer {
+@charset "utf-8";
+/*
+ * object/layout/_footer.scss
+ */
+#l-footer {
 	padding: 15px;
 	background-color: #cccccc;
 	box-sizing: border-box;
@@ -18,3 +22,4 @@
 .copyright {
 	text-align: center;
 }
+
