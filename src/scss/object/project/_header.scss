@@ -21,15 +21,24 @@
 }
 
 .p-header-nav-lists {
+	border-radius: 3px;
+	border: 1px solid #dfdfdf;
 	.p-header-nav-lists__item {
 		display: block;
 		float: left;
 		background-color: #ffffff;
+		@include font12;
 		a {
 			padding: 8px 15px;
 			color: #333333;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			transition: all .3s;
 			&:hover {
 				background-color: #dfdfdf;
+				-webkit-transition: all .5s;
+				-moz-transition: all .5s;
+				transition: all .5s;
 			}
 		}
 		&:first-child {

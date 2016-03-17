@@ -9,7 +9,7 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	background-color: #ffffff;
+	background-color: #faf9f7;
 	color: #333333;
 	font-size: 11px;
 	font-size: 1.1rem;
@@ -27,15 +27,7 @@ ul, ol {
 a {
 	display: block;
 	word-break: break-all;
-}
-a:link,
-a:active,
-a:visited,
-a:hover,
-a:focus {
 	text-decoration: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-touch-callout: none;
 }
 tbody {
 	display: table-row-group;

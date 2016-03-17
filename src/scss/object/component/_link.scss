@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*
+ * object/component/_link.scss
+ */
+.c-link {
+	padding-left: 8px;
+	color: #3579d4;
+	font-weight: bold;
+	text-decoration: underline;
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 7px;
+		height: 9px;
+		margin-right: 3px;
+		@include bg-img('arrow.png');
+		background-repeat: no-repeat;
+	}
+}

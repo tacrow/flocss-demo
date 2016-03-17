@@ -218,7 +218,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #faf9f7;
   color: #333333;
   font-size: 11px;
   font-size: 1.1rem;
@@ -239,16 +239,7 @@ ul, ol {
 a {
   display: block;
   word-break: break-all;
-}
-
-a:link,
-a:active,
-a:visited,
-a:hover,
-a:focus {
   text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
 }
 
 tbody {
@@ -321,14 +312,12 @@ body {
   position: relative;
   width: 100%;
   min-height: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 180px;
 }
 
 #footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 100px;
 }
 
 /*
@@ -348,9 +337,12 @@ body {
  * layout/_footer.scss
  */
 #footer {
+  width: 100%;
+  height: 180px;
   padding: 15px;
   border-top: 1px solid #dfdfdf;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 /*
@@ -370,6 +362,7 @@ body {
   padding: 10px;
   border: 1px solid #dfdfdf;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 /*
@@ -381,6 +374,7 @@ body {
   padding: 10px;
   border: 1px solid #dfdfdf;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 /*
@@ -400,6 +394,60 @@ body {
   padding: 3px 5px 2px;
   border-radius: 3px;
   background-color: #cccccc;
+}
+
+.c-label--new {
+  margin-right: 5px;
+  background-color: #d9534f;
+  color: #ffffff;
+}
+
+/*
+ * object/component/_tab.scss
+ */
+.c-content-tab {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.c-content-tab .c-content-tab__target {
+  float: left;
+  width: 120px;
+  margin-bottom: -1px;
+  margin-right: 3px;
+  padding: 10px 0;
+  border-radius: 3px 3px 0 0;
+  border-top: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  background-color: #dfdfdf;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+.c-content-tab .c-content-tab__target:hover {
+  background-color: #ffffff;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+.c-content-tab .c-content-tab__target:last-child {
+  margin-right: 0;
+}
+.c-content-tab .c-content-tab__target.is-active {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+.c-content-tab .c-content-tab__target.c-content-tab__target--close {
+  text-decoration: line-through;
+  opacity: .5;
+  cursor: auto;
+}
+.c-content-tab .c-content-tab__target.c-content-tab__target--close:hover {
+  background-color: #dfdfdf;
 }
 
 /*
@@ -424,11 +472,30 @@ body {
 .c-media-item .c-media-item__body .text {
   min-height: 70px;
   margin-bottom: 10px;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 11px;
+  font-size: 1.1rem;
 }
 .c-media-item .c-media-item__body .link {
   text-align: right;
+}
+
+/*
+ * object/component/_link.scss
+ */
+.c-link {
+  padding-left: 8px;
+  color: #3579d4;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.c-link:before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 9px;
+  margin-right: 3px;
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
 }
 
 /*
@@ -452,17 +519,29 @@ body {
   right: 15px;
 }
 
+.p-header-nav-lists {
+  border-radius: 3px;
+  border: 1px solid #dfdfdf;
+}
 .p-header-nav-lists .p-header-nav-lists__item {
   display: block;
   float: left;
   background-color: #ffffff;
+  font-size: 12px;
+  font-size: 1.2rem;
 }
 .p-header-nav-lists .p-header-nav-lists__item a {
   padding: 8px 15px;
   color: #333333;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
 }
 .p-header-nav-lists .p-header-nav-lists__item a:hover {
   background-color: #dfdfdf;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
 }
 .p-header-nav-lists .p-header-nav-lists__item:first-child {
   border-radius: 3px 0 0 3px;
@@ -481,7 +560,7 @@ body {
  * object/project/_footer.scss
  */
 .p-footer-lists {
-  margin-bottom: 40px;
+  margin-bottom: 120px;
 }
 .p-footer-lists .p-footer-lists__item {
   float: left;
@@ -501,8 +580,8 @@ body {
 .p-news {
   margin-bottom: 10px;
   padding: 10px;
-  border-radius: 3px;
   border: 1px solid #dfdfdf;
+  background-color: #ffffff;
 }
 
 .p-news-title {
