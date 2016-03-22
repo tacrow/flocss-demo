@@ -2,3 +2,24 @@
 /*
  * object/component/_button.scss
  */
+.c-btn {
+	display: inline-block;
+	padding: 5px 15px 4px;
+	border-radius: 2px;
+	background-color: #cccccc;
+	color: #ffffff;
+	@include font16;
+	&:hover {
+		opacity: .7;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		transition: all .5s;
+	}
+}
+
+.c-btn--signup {
+	position: absolute;
+	top: 11px;
+	right: 15px;
+	background-color: #128fdc;
+}

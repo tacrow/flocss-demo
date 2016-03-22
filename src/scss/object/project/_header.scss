@@ -2,40 +2,48 @@
 /*
  * object/project/_header.scss
  */
+.p-top-header-logo {
+	display: block;
+	position: absolute;
+	top: 16px;
+	left: 15px;
+	width: 151px;
+	height: 18px;
+	@include bg-img('logo_top.png');
+	background-repeat: no-repeat;
+}
+
 .p-header-logo {
 	display: block;
 	position: absolute;
 	top: 15px;
 	left: 15px;
-	width: 141px;
-	height: 22px;
-	@include bg-img('logo.png');
+	width: 151px;
+	height: 18px;
+	@include bg-img('logo_top.png');
 	background-repeat: no-repeat;
 }
 
 .p-header-nav {
 	display: block;
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	top: 12px;
+	left: 180px;
 }
 
 .p-header-nav-lists {
-	border-radius: 3px;
-	border: 1px solid #dfdfdf;
 	.p-header-nav-lists__item {
 		display: block;
 		float: left;
-		background-color: #ffffff;
 		@include font12;
 		a {
 			padding: 8px 15px;
-			color: #333333;
+			color: #ffffff;
 			-webkit-transition: all .3s;
 			-moz-transition: all .3s;
 			transition: all .3s;
 			&:hover {
-				background-color: #dfdfdf;
+				color: #128fdc;
 				-webkit-transition: all .5s;
 				-moz-transition: all .5s;
 				transition: all .5s;
@@ -47,11 +55,10 @@
 		&:last-child {
 			border-radius: 0 3px 3px 0;
 		}
-		&.is-active {
-			background-color: #dfdfdf;
-		}
 		&.is-active span {
+			color: #128fdc;
 			font-weight: bold;
 		}
 	}
+
 }

@@ -81,6 +81,22 @@ $font-size-base-rem: 1.1rem;
 	font-size: 20px;
 	font-size: 2rem;
 }
+@mixin font30 {
+	font-size: 30px;
+	font-size: 3rem;
+}
+@mixin font35 {
+	font-size: 35px;
+	font-size: 3.5rem;
+}
+@mixin font40 {
+	font-size: 40px;
+	font-size: 4rem;
+}
+@mixin font50 {
+	font-size: 50px;
+	font-size: 5rem;
+}
 
 /*
  * box-shadow

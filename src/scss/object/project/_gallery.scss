@@ -6,12 +6,20 @@
 // top gallery
 .p-gallery-lists {
 	.p-gallery-lists__item {
+		position: relative;
 		float: left;
-		width: 24%;
+		width: 49.5%;
 		margin-right: 1%;
 		margin-bottom: 10px;
-		&:nth-child(4n) {
+		box-sizing: border-box;
+		&:nth-child(2n) {
 			margin-right: 0;
+		}
+		.p-media-item__body {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			box-sizing: border-box;
 		}
 	}
 }

@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*
+ * layout/_search.scss
+ */
+
+.c-search {
+	position: absolute;
+	top: 12px;
+	right: 112px;
+	padding: 7px 10px 5px 35px;
+	border: 0 none;
+	border-radius: 3px;
+	background-color: #ffffff;
+	@include bg-img('icn_search.png');
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-position: 5px 3px;
+	color: #333333;
+	@include font16;
+}

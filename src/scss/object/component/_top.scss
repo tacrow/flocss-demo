@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+ * project/_top.scss
+ */
+
+.p-top-kv {
+	width: 100%;
+	height: 800px;
+	padding-top: 55px;
+	@include bg-img('item/kv_top.png');
+	background-position: center;
+}

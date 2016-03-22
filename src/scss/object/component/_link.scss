@@ -3,17 +3,7 @@
  * object/component/_link.scss
  */
 .c-link {
-	padding-left: 8px;
-	color: #3579d4;
+	color: #ffffff;
 	font-weight: bold;
 	text-decoration: underline;
-	&:before {
-		content: '';
-		display: inline-block;
-		width: 5px;
-		height: 5px;
-		margin-right: 3px;
-		@include bg-img('arrow.png');
-		background-repeat: no-repeat;
-	}
 }
