@@ -384,7 +384,7 @@ body {
  * object/component/_tab.scss
  */
 .c-content-tab {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   border-bottom: 1px solid #dfdfdf;
 }
 .c-content-tab .c-content-tab__target {
