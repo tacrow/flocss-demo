@@ -8,11 +8,11 @@
 	.p-gallery-lists__item {
 		position: relative;
 		float: left;
-		width: 49.5%;
-		margin-right: 1%;
-		margin-bottom: 10px;
+		width: 33.2%;
+		margin-right: .2%;
+		margin-bottom: 3px;
 		box-sizing: border-box;
-		&:nth-child(2n) {
+		&:nth-child(3n) {
 			margin-right: 0;
 		}
 		.p-media-item__body {

@@ -86,19 +86,26 @@
 	height: 300px;
 	@include bg-img('item/item4.png');
 	background-position: center;
-	a {
+	.p-top-link__box {
 		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		width: 300px;
-		height: 40px;
+		width: 500px;
+		height: 60px;
 		margin: auto;
+	}
+	.p-top-link__box,
+	.p-top-link__box a {
+		display: inline-block;
 		color: #ffffff;
 		@include font30;
 		-webkit-text-shadow: 0 1px 3px rgba(0,0,0,.5);
 		text-shadow: 0 1px 3px rgba(0,0,0,.5);
 		text-align: center;
+	}
+	.p-top-link__box p {
+		@include font14;
 	}
 }

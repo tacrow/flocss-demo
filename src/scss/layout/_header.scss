@@ -2,20 +2,11 @@
 /*
  * layout/_header.scss
  */
-#top-header {
+#header {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	height: 55px;
 	background-color: #000000;
 	z-index: 9999;
-}
-#header {
-	position: relative;
-	height: 450px;
-	border-bottom: 1px solid #dfdfdf;
-	@include bg-img('kv.png');
-	background-repeat: no-repeat;
-	background-clip: padding-box;
-	background-clip: padding;
 }

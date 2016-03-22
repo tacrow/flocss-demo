@@ -2,26 +2,17 @@
 /*
  * object/project/_header.scss
  */
-.p-top-header-logo {
-	display: block;
+.p-header-logo {
 	position: absolute;
 	top: 16px;
 	left: 15px;
-	width: 151px;
-	height: 18px;
-	@include bg-img('logo_top.png');
-	background-repeat: no-repeat;
-}
-
-.p-header-logo {
-	display: block;
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	width: 151px;
-	height: 18px;
-	@include bg-img('logo_top.png');
-	background-repeat: no-repeat;
+	a {
+		display: block;
+		width: 151px;
+		height: 18px;
+		@include bg-img('logo_top.png');
+		background-repeat: no-repeat;
+	}
 }
 
 .p-header-nav {
