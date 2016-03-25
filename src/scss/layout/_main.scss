@@ -3,8 +3,9 @@
  * object/layout/_main.scss
  */
 #main {
-	padding: 10px;
-	border: 1px solid #dfdfdf;
+	min-width: 800px;
+	max-width: calc(100% - 20%);
+	margin: 0 auto;
+	padding-top: 10px;
 	box-sizing: border-box;
-	background-color: #ffffff;
 }

@@ -83,7 +83,7 @@
 .p-top-link {
 	position: relative;
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	@include bg-img('item/item4.png');
 	background-position: center;
 	.p-top-link__box {
@@ -107,5 +107,6 @@
 	}
 	.p-top-link__box p {
 		@include font14;
+		text-align: left;
 	}
 }
