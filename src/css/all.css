@@ -135,8 +135,9 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  -moz-appearance: button;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0 none;
   cursor: pointer;
 }
 
@@ -288,6 +289,12 @@ button {
   -webkit-touch-callout: none;
 }
 
+/* black layer */
+.lock {
+  overflow: hidden;
+  height: 100%;
+}
+
 /* 画面タップ時のちらつき対策 */
 .TapHelper {
   -webkit-tap-highlight-color: transparent;
@@ -312,20 +319,6 @@ body {
 #footer {
   position: absolute;
   bottom: 0;
-}
-
-#black-layer {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 10;
-}
-#black-layer.is-active {
-  display: block;
 }
 
 /*
@@ -373,6 +366,35 @@ body {
 /*
  * layout/_modal.scss
  */
+.l-content-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  min-width: 600px;
+  max-width: calc(100% - 30%);
+  height: 450px;
+  background-color: #ffffff;
+  z-index: 11;
+}
+
+.l-black-layer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.l-black-layer.is-active {
+  display: block;
+}
+
 /*
  * object/component/_heading.scss
  */
@@ -733,6 +755,32 @@ body {
   font-size: 14px;
   font-size: 1.4rem;
   text-align: left;
+}
+
+/*
+ * object/project/_main.scss
+ */
+.p-main-modal .p-main-modal__body {
+  position: relative;
+}
+.p-main-modal .p-main-modal__body .info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.p-main-modal .p-main-modal__body .info .title,
+.p-main-modal .p-main-modal__body .info .text {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.p-main-modal .p-main-modal__body .info .title {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.p-main-modal .p-main-modal__body .info .text {
+  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 /*

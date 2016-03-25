@@ -93,8 +93,9 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button;
-	-moz-appearance: button;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 0 none;
 	cursor: pointer;
 }
 button[disabled],
