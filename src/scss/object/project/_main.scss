@@ -10,18 +10,6 @@
 			position: absolute;
 			bottom: 10px;
 			left: 10px;
-			.title,
-			.text {
-				margin-bottom: 10px;
-				color: #ffffff;
-			}
-			.title {
-				@include font14;
-				font-weight: bold;
-			}
-			.text {
-				@include font11;
-			}
 		}
 	}
 }

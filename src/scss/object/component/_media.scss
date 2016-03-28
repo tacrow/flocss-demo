@@ -13,18 +13,14 @@
 	.c-media-item__body {
 		padding: 10px;
 		opacity: 0;
-		-webkit-transition: all .5s;
-		-moz-transition: all .5s;
-		transition: all .5s;
+		&.is-anim {
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			transition: all .5s;
+		}
 		.title,
 		.text {
 			color: #ffffff;
-		}
-		.title,
-		.text,
-		.link {
-			-webkit-text-shadow: 0 1px 3px rgba(0,0,0,.5);
-			text-shadow: 0 1px 3px rgba(0,0,0,.5);
 		}
 		.title {
 			margin-bottom: 5px;
@@ -43,9 +39,6 @@
 	&:hover {
 		.c-media-item__body {
 			opacity: 1;
-			-webkit-transition: all .5s;
-			-moz-transition: all .5s;
-			transition: all .5s;
 		}
 	}
 }

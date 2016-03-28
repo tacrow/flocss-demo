@@ -290,11 +290,6 @@ button {
 }
 
 /* black layer */
-.lock {
-  overflow: hidden;
-  height: 100%;
-}
-
 /* 画面タップ時のちらつき対策 */
 .TapHelper {
   -webkit-tap-highlight-color: transparent;
@@ -368,22 +363,20 @@ body {
  */
 .l-content-modal {
   display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  min-width: 600px;
-  max-width: calc(100% - 30%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
   height: 450px;
+  margin-left: -400px;
+  margin-top: -225px;
   background-color: #ffffff;
   z-index: 11;
 }
 
 .l-black-layer {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -482,6 +475,8 @@ body {
 .c-media-item .c-media-item__body {
   padding: 10px;
   opacity: 0;
+}
+.c-media-item .c-media-item__body.is-anim {
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s;
@@ -489,12 +484,6 @@ body {
 .c-media-item .c-media-item__body .title,
 .c-media-item .c-media-item__body .text {
   color: #ffffff;
-}
-.c-media-item .c-media-item__body .title,
-.c-media-item .c-media-item__body .text,
-.c-media-item .c-media-item__body .link {
-  -webkit-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .c-media-item .c-media-item__body .title {
   margin-bottom: 5px;
@@ -513,9 +502,6 @@ body {
 }
 .c-media-item:hover .c-media-item__body {
   opacity: 1;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  transition: all .5s;
 }
 
 /*
@@ -571,6 +557,10 @@ body {
   top: 11px;
   right: 15px;
   background-color: #128fdc;
+}
+
+.c-btn--close {
+  background-color: #a9a9a9;
 }
 
 /*
@@ -768,20 +758,6 @@ body {
   bottom: 10px;
   left: 10px;
 }
-.p-main-modal .p-main-modal__body .info .title,
-.p-main-modal .p-main-modal__body .info .text {
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-.p-main-modal .p-main-modal__body .info .title {
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-.p-main-modal .p-main-modal__body .info .text {
-  font-size: 11px;
-  font-size: 1.1rem;
-}
 
 /*
  * object/project/_news.scss
@@ -969,6 +945,11 @@ body {
 
 .u-verticalTextBottom {
   vertical-align: text-bottom;
+}
+
+.u-baseTextShadow {
+  -webkit-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /*
