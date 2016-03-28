@@ -10,8 +10,10 @@
 	var $pageMain = $(pageMain);
 
 	if($pageMain.length > 0) {
-		var listCnt  = '#js-cnt-list';
+		var listCnt  = '.js-cnt-list';
 		var $listCnt = $(listCnt);
+		var link  = '.js-link';
+		var $link = $(link);
 		var btnCloseModal  = '.js-btn-close-modal';
 		var $btnCloseModal = $(btnCloseModal);
 		var blackLayer  = '.js-black-layer';
@@ -21,7 +23,7 @@
 		var $target;
 
 		// modal - open/close
-		$DOC.on('click', listCnt, function() {
+		$DOC.on('click', listCnt, link, function() {
 			data    = $(this).attr('data-item');
 			$modal  = $('#' + data);
 			$target = data;
