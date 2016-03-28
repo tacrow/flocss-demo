@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*
+ * object/component/_form.scss
+ */
+// label
+.c-input-label {
+	padding: 5px 10px 5px 0;
+	@include font14;
+}
+.c-input-label--radio {
+	padding: 5px 10px 5px 5px;
+	@include font14;
+}
+
+// checkbox
+.c-checkbox {
+	margin-right: 10px;
+}
+
+// radio
+.c-radio {
+
+}
+
+// select
+.c-select {
+	position: relative;
+	padding: 5px 40px 5px 10px;
+	border-radius: 3px;
+	@include bg-img('parts/arrow-select.png');
+	background-repeat: no-repeat;
+	background-position: center right;
+	@include font12;
+	&.c-select--standard {
+		border: 1px solid #5eb9bc;
+		background-color: #dbf3eb;
+	}
+	&.c-select--status {
+		border: 1px solid #b7a44c;
+		background-color: #f8f1c9;
+	}
+}
+
+// textarea
+.c-textarea {
+	width: 100%;
+	min-height: 120px;
+	padding: 10px;
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+	@include font14;
+}

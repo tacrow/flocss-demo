@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>flocss-demo</title>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="flocss-demo">
+	<meta name="description" content="flocss-demo">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="src/css/all.min.css">
+</head>
+<body id="page-main" class="">
+	<div id="wrap">
+		<header id="header">
+			<h1 class="p-header-logo">
+				<a href="index.html" class="u-ir">flocss-demo</a>
+			</h1>
+			<nav class="p-header-nav">
+				<ul class="p-header-nav-lists u-cf">
+					<li class="p-header-nav-lists__item js-nav_item">
+						<a href="main.html">
+							<span>Main</span>
+						</a>
+					</li>
+					<li class="p-header-nav-lists__item js-nav_item">
+						<a href="grid.html">
+							<span>Grid</span>
+						</a>
+					</li>
+					<li class="p-header-nav-lists__item js-nav_item is-active">
+						<a href="form.html">
+							<span>Form</span>
+						</a>
+					</li>
+					<li class="p-header-nav-lists__item js-nav_item">
+						<a href="">
+							<span>ページ4</span>
+						</a>
+					</li>
+					<li class="p-header-nav-lists__item js-nav_item">
+						<a href="">
+							<span>ページ5</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<form>
+				<input type="text" class="c-search c-search--top" placeholder="Search">
+			</form>
+			<a href="" class="c-btn c-btn--signup">Sign&nbsp;In</a>
+		</header>
+
+		<div id="content" class="u-cf">
+			<div id="main">
+				<h2 class="c-heading u-fs30">Form</h2>
+				<form>
+					<h3 class="c-heading">Checkbox</h3>
+					<label class="c-input-label">
+						<input type="checkbox" value="1" class="c-checkbox">item1
+					</label>
+					<label class="c-input-label">
+						<input type="checkbox" value="2" class="c-checkbox">item2
+					</label>
+					<label class="c-input-label">
+						<input type="checkbox" value="3" class="c-checkbox">item3
+					</label>
+					<label class="c-input-label">
+						<input type="checkbox" value="4" class="c-checkbox">item4
+					</label>
+					<label class="c-input-label">
+						<input type="checkbox" value="5" class="c-checkbox">item5
+					</label>
+					<br>
+					<br>
+					<h3 class="c-heading">Radio</h3>
+					<input type="radio" name="item" value="1" id="item1">
+					<label for="item1" class="c-input-label--radio">item1</label>
+					<input type="radio" name="item" value="2" id="item2">
+					<label for="item2" class="c-input-label--radio">item2</label>
+					<input type="radio" name="item" value="3" id="item3">
+					<label for="item3" class="c-input-label--radio">item3</label>
+					<input type="radio" name="item" value="4" id="item4">
+					<label for="item4" class="c-input-label--radio">item4</label>
+					<input type="radio" name="item" value="5" id="item5">
+					<label for="item5" class="c-input-label--radio">item5</label>
+					<br>
+					<br>
+					<h3 class="c-heading">Select</h3>
+					<select class="c-select u-mr10">
+						<option value="" class="" selected>選択してください</option>
+						<option value="1" class="">item1</option>
+						<option value="2" class="">item2</option>
+						<option value="3" class="">item3</option>
+						<option value="4" class="">item4</option>
+						<option value="5" class="">item5</option>
+					</select>
+					<select class="c-select c-select--standard u-mr10">
+						<option value="" class="" selected>選択してください</option>
+						<option value="1" class="">item1</option>
+						<option value="2" class="">item2</option>
+						<option value="3" class="">item3</option>
+						<option value="4" class="">item4</option>
+						<option value="5" class="">item5</option>
+					</select>
+					<select class="c-select c-select--status">
+						<option value="" class="" selected>選択してください</option>
+						<option value="1" class="">item1</option>
+						<option value="2" class="">item2</option>
+						<option value="3" class="">item3</option>
+						<option value="4" class="">item4</option>
+						<option value="5" class="">item5</option>
+					</select>
+					<br>
+					<br>
+					<h3 class="c-heading">Textarea</h3>
+					<textarea name="text" placeholder="テキストを入力してください" class="c-textarea"></textarea>
+					<br>
+					<br>
+					<input type="submit" value="Submit" class="c-btn c-btn--submit">
+				</form>
+			</div>
+		</div>
+	
+		<footer id="footer">
+			<ul class="p-footer-lists u-cf">
+				<li class="p-footer-lists__item">
+					<a href="">About</a>
+				</li>
+				<li class="p-footer-lists__item">
+					<a href="">Terms</a>
+				</li>
+				<li class="p-footer-lists__item">
+					<a href="">Privacy</a>
+				</li>
+				<li class="p-footer-lists__item">
+					<a href="">Security</a>
+				</li>
+				<li class="p-footer-lists__item">
+					<a href="">Contact</a>
+				</li>
+				<li class="p-footer-lists__item">
+					<a href="">Help</a>
+				</li>
+			</ul>
+			<p class="p-copyright">Copyright © flocss-demo 2016, All Rights Reserved.</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript"
+	 src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="src/js/all_js/all.min.js"></script>
+</body>
+</html>

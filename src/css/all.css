@@ -595,6 +595,54 @@ body {
 }
 
 /*
+ * object/component/_form.scss
+ */
+.c-input-label {
+  padding: 5px 10px 5px 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.c-input-label--radio {
+  padding: 5px 10px 5px 5px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.c-checkbox {
+  margin-right: 10px;
+}
+
+.c-select {
+  position: relative;
+  padding: 5px 40px 5px 10px;
+  border-radius: 3px;
+  background-image: url("../img/parts/arrow-select.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+.c-select.c-select--standard {
+  border: 1px solid #5eb9bc;
+  background-color: #dbf3eb;
+}
+.c-select.c-select--status {
+  border: 1px solid #b7a44c;
+  background-color: #f8f1c9;
+}
+
+.c-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/*
  * object/component/_link.scss
  */
 .c-link {
@@ -627,6 +675,10 @@ body {
   top: 11px;
   right: 15px;
   background-color: #128fdc;
+}
+
+.c-btn--submit {
+  background-color: #d9534f;
 }
 
 .c-btn--close {
