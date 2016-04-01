@@ -4,12 +4,36 @@
  */
 // label
 .c-input-label {
+	display: inline-block;
 	padding: 5px 10px 5px 0;
 	@include font14;
-}
-.c-input-label--radio {
-	padding: 5px 10px 5px 5px;
-	@include font14;
+	&.c-input-label--radio {
+		padding: 5px 10px 5px 5px;
+	}
+	&.c-input-label--category {
+		width: 110px;
+		padding: 10px 20px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #dfdfdf;
+		border-radius: 3px;
+		background-color: #ffffff;
+		box-sizing: border-box;
+		cursor: pointer;
+		&:nth-child(6n),
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background-color: #cfcfcf;
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			transition: all .5s;
+		}
+		&.is-active {
+			background-color: #cfcfcf;
+		}
+	}
 }
 
 // checkbox
@@ -19,7 +43,7 @@
 
 // radio
 .c-radio {
-
+	
 }
 
 // select
@@ -48,5 +72,6 @@
 	padding: 10px;
 	border: 1px solid #dfdfdf;
 	border-radius: 3px;
+	box-sizing: border-box;
 	@include font14;
 }

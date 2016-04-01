@@ -1,5 +1,5 @@
 /*
- * flocss-demo gulpfile,js
+ * flocss-demo gulpfile.js
  */
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();

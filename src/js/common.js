@@ -9,6 +9,9 @@
 	var pageMain  = '#page-main';
 	var $pageMain = $(pageMain);
 
+	var pageForm  = '#page-form';
+	var $pageForm = $(pageForm);
+
 	if($pageMain.length > 0) {
 		var listCnt  = '.js-cnt-list';
 		var $listCnt = $(listCnt);
@@ -44,6 +47,17 @@
 			$body.removeClass('lock');
 			$modal.fadeOut(250);
 			$blackLayer.fadeOut(250);
+		});
+	}
+
+	if($pageForm.length > 0) {
+		var checkbox = '.js-checkbox';
+		var $checkbox = $(checkbox);
+		var label = '.c-input-label'
+		var $label = $(label);
+
+		$DOC.on('click', checkbox, function() {
+			$(this).closest('.c-input-label').toggleClass('is-active');
 		});
 	}
 

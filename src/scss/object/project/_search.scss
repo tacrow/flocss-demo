@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*
+ * object/project/_search.scss
+ */
+.p-search {
+	width: 726px;
+	padding: 10px;
+	border: 1px solid #dfdfdf;
+	background-color: #ffffff;
+}
+.p-search__inputbox {
+
+}
+
+.p-search-table {
+	width: 726px;
+	border: 1px solid #dfdfdf;
+}
+
+.p-search-group {
+	border-bottom: 1px solid #dfdfdf;
+	&:last-child {
+		border-bottom: 0 none;
+	}
+	.p-search-group__title {
+		width: 108px;
+		background-color: #a5a5a5;
+		color: #ffffff;
+	}
+	.p-search-group__inputlist {
+		padding-left: 10px;
+	}
+}
