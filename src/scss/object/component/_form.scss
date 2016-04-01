@@ -34,6 +34,29 @@
 			background-color: #cfcfcf;
 		}
 	}
+	&.c-input-label--vertical {
+		display: block;
+		width: 187px;
+		padding: 10px 20px;
+		margin-bottom: 10px;
+		border: 1px solid #dfdfdf;
+		border-radius: 3px;
+		background-color: #ffffff;
+		box-sizing: border-box;
+		cursor: pointer;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:hover {
+			background-color: #cfcfcf;
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			transition: all .5s;
+		}
+		&.is-active {
+			background-color: #cfcfcf;
+		}
+	}
 }
 
 // checkbox
@@ -62,6 +85,13 @@
 	&.c-select--status {
 		border: 1px solid #b7a44c;
 		background-color: #f8f1c9;
+	}
+	&.c-select--footer {
+		width: 187px;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 

@@ -629,6 +629,29 @@ body {
 .c-input-label.c-input-label--category.is-active {
   background-color: #cfcfcf;
 }
+.c-input-label.c-input-label--vertical {
+  display: block;
+  width: 187px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.c-input-label.c-input-label--vertical:last-child {
+  margin-bottom: 0;
+}
+.c-input-label.c-input-label--vertical:hover {
+  background-color: #cfcfcf;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+.c-input-label.c-input-label--vertical.is-active {
+  background-color: #cfcfcf;
+}
 
 .c-checkbox {
   margin-right: 10px;
@@ -651,6 +674,13 @@ body {
 .c-select.c-select--status {
   border: 1px solid #b7a44c;
   background-color: #f8f1c9;
+}
+.c-select.c-select--footer {
+  width: 187px;
+  margin-bottom: 10px;
+}
+.c-select.c-select--footer:last-child {
+  margin-bottom: 0;
 }
 
 .c-textarea {
@@ -963,6 +993,7 @@ body {
  */
 .p-search {
   width: 726px;
+  margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #dfdfdf;
   background-color: #ffffff;
@@ -986,6 +1017,35 @@ body {
 }
 .p-search-group .p-search-group__inputlist {
   padding-left: 10px;
+}
+
+.p-search-footer {
+  width: 800px;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.p-search-footer .p-search-footer__box {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.p-search-footer .p-search-footer__lists {
+  float: left;
+  width: 187px;
+  margin-right: 10px;
+}
+.p-search-footer .p-search-footer__lists:last-child {
+  margin-right: 0;
+}
+.p-search-footer .p-search-footer__lists .p-search-footer__lists__wrap {
+  padding-left: 5px;
+}
+.p-search-footer .p-search-footer__lists .head {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #a5a5a5;
+  color: #ffffff;
 }
 
 /* 
@@ -1707,6 +1767,10 @@ body {
 
 .u-cf {
   *zoom: 1;
+}
+
+.u-clear {
+  clear: both;
 }
 
 /*
