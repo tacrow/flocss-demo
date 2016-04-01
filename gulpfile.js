@@ -8,12 +8,14 @@ var sass = require('gulp-ruby-sass');
 var runSequence = require('run-sequence');
 
 var src = {
-	scss:  'src/scss/**/*.scss',
-	css:   'src/css/',
-	allcss:'src/css/all.css',
-	js:    'src/js/*.js',
-	alljs: 'src/js/all_js/all.js',
-	destjs:'src/js/all_js/',
+	scss:   'src/scss/**/*.scss',
+	css:    'src/css/',
+	allcss: 'src/css/all.css',
+	css_ab: 'src/css/ab/*.css',
+	min_ab: 'src/css/ab/min/',
+	js:     'src/js/*.js',
+	alljs:  'src/js/all_js/all.js',
+	destjs: 'src/js/all_js/',
 }
 
 //clean
@@ -21,12 +23,14 @@ gulp.task('clean', function(callback) {
 	return del([src.css, src.destjs], callback);
 });
 
-// css task
+// scss task
 gulp.task('sass', function() {
 	return sass(src.scss, { style: 'expanded' })
 	.pipe($.plumber())
 	.pipe(gulp.dest(src.css));
 });
+
+// css task
 gulp.task('csslint', function() {
 	return gulp.src(src.allcss)
 	.pipe($.plumber())
@@ -39,6 +43,21 @@ gulp.task('cssmin', function() {
 	.pipe($.cssmin())
 	.pipe($.rename({ suffix: '.min' }))
 	.pipe(gulp.dest(src.css));
+});
+
+// css-ab task
+gulp.task('csslint-ab', function() {
+	return gulp.src(src.css_ab)
+	.pipe($.plumber())
+	.pipe($.csslint())
+	.pipe($.csslint.reporter());
+});
+gulp.task('cssmin-ab', function() {
+	return gulp.src(src.css_ab)
+	.pipe($.plumber())
+	.pipe($.cssmin())
+	.pipe($.rename({ suffix: '.min' }))
+	.pipe(gulp.dest(src.min_ab));
 });
 
 // js task
@@ -66,6 +85,8 @@ gulp.task('watch', function() {
 	gulp.watch(src.scss, ['sass']);
 	// gulp.watch(src.allcss, ['csslint']);
 	gulp.watch(src.allcss, ['cssmin']);
+	// gulp.watch(src.css_ab, ['csslint-ab']);
+	gulp.watch(src.css_ab, ['cssmin-ab']);
 	gulp.watch(src.js, ['jshint']);
 	gulp.watch(src.js, ['concat']);
 	gulp.watch(src.alljs, ['uglify']);
@@ -73,7 +94,7 @@ gulp.task('watch', function() {
 
 // build
 gulp.task('build', function(callback) {
-	runSequence('clean', 'sass', 'csslint', 'cssmin', 'jshint', 'concat', 'uglify', callback);
+	runSequence('clean', 'sass', 'csslint', 'cssmin', 'csslint-ab', 'cssmin-ab', 'jshint', 'concat', 'uglify', callback);
 });
 
 // default
