@@ -25,7 +25,7 @@ var src = {
 	destjs: 'src/js/all_js/',
 }
 
-//clean
+// clean
 gulp.task('clean', function(callback) {
 	return del([src.css, src.destjs], callback);
 });
@@ -68,6 +68,7 @@ gulp.task('cssnano-ab', function() {
 // js task
 gulp.task('jshint', function() {
 	return gulp.src(src.js)
+	.pipe($.plumber())
 	.pipe($.jshint())
 	.pipe($.jshint.reporter('jshint-stylish'));
 });
