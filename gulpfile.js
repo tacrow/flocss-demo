@@ -25,7 +25,7 @@ gulp.task('clean', function(callback) {
 
 // scss task
 gulp.task('sass', function() {
-	return sass(src.scss, { style: 'expanded' })
+	return sass(src.scss, { noCache: true, style: 'expanded' })
 	.pipe($.plumber())
 	.pipe(gulp.dest(src.css));
 });
