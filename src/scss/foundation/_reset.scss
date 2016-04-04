@@ -11,7 +11,7 @@ audio:not([controls]) {
 	height: 0;
 }
 html {
-	font-family: Helvetica, 'Droid Sans', 'Hiragino Kaku Gothic Pro', sans-serif;
+	font-family: Helvetica, "Droid Sans", "Hiragino Kaku Gothic Pro", sans-serif;
 	font-size: 62.5%;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -71,9 +71,9 @@ pre {
 	overflow: auto;
 }
 code, kbd, pre, samp {
-	font-family: monospace,serif;
+	font-family: monospace, serif;
 	font-size: 10px;
-	font-size: 1.0rem;
+	font-size: 1rem;
 }
 button, input, optgroup, select, textarea {
 	margin: 0;

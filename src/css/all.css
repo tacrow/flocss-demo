@@ -1,20 +1,5 @@
 @charset "UTF-8";
 /*
- * foundation/_mixins.scss
- */
-/*
- * background-image base-path
- */
-/*
- * color
- */
-/*
- * font-size
- */
-/*
- * box-shadow
- */
-/*
  * foundation/reset.css
  */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -31,7 +16,7 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: Helvetica, 'Droid Sans', 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-family: Helvetica, "Droid Sans", "Hiragino Kaku Gothic Pro", sans-serif;
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -108,9 +93,9 @@ pre {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace,serif;
+  font-family: monospace, serif;
   font-size: 10px;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 button, input, optgroup, select, textarea {
@@ -289,7 +274,6 @@ button {
   -webkit-touch-callout: none;
 }
 
-/* black layer */
 /* 画面タップ時のちらつき対策 */
 .TapHelper {
   -webkit-tap-highlight-color: transparent;
@@ -717,9 +701,9 @@ body {
 }
 .c-btn:hover {
   opacity: .7;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .c-btn--signup {

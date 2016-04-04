@@ -6,11 +6,18 @@ var $ = require('gulp-load-plugins')();
 var del = require('del');
 var sass = require('gulp-ruby-sass');
 var runSequence = require('run-sequence');
+var stylelint = [
+	require('stylelint'),
+	require('postcss-reporter')({ clearMessages: true })
+];
+var cssnano = [
+	require('cssnano')({ mergeRules: false })
+];
 
 var src = {
 	scss:   'src/scss/**/*.scss',
 	css:    'src/css/',
-	allcss: 'src/css/all.css',
+	css_all: 'src/css/all.css',
 	css_ab: 'src/css/ab/*.css',
 	min_ab: 'src/css/ab/min/',
 	js:     'src/js/*.js',
@@ -31,31 +38,29 @@ gulp.task('sass', function() {
 });
 
 // css task
-gulp.task('csslint', function() {
-	return gulp.src(src.allcss)
+gulp.task('stylelint', function() {
+	return gulp.src(src.css_all)
 	.pipe($.plumber())
-	.pipe($.csslint())
-	.pipe($.csslint.reporter());
+	.pipe($.postcss(stylelint))
 });
-gulp.task('cssmin', function() {
-	return gulp.src(src.allcss)
+gulp.task('cssnano', function() {
+	return gulp.src(src.css_all)
 	.pipe($.plumber())
-	.pipe($.cssmin())
+	.pipe($.postcss(cssnano))
 	.pipe($.rename({ suffix: '.min' }))
 	.pipe(gulp.dest(src.css));
 });
 
 // css-ab task
-gulp.task('csslint-ab', function() {
+gulp.task('stylelint-ab', function() {
 	return gulp.src(src.css_ab)
 	.pipe($.plumber())
-	.pipe($.csslint())
-	.pipe($.csslint.reporter());
+	.pipe($.postcss(stylelint))
 });
-gulp.task('cssmin-ab', function() {
+gulp.task('cssnano-ab', function() {
 	return gulp.src(src.css_ab)
 	.pipe($.plumber())
-	.pipe($.cssmin())
+	.pipe($.postcss(cssnano))
 	.pipe($.rename({ suffix: '.min' }))
 	.pipe(gulp.dest(src.min_ab));
 });
@@ -83,10 +88,10 @@ gulp.task('uglify', function() {
 // watch
 gulp.task('watch', function() {
 	gulp.watch(src.scss, ['sass']);
-	// gulp.watch(src.allcss, ['csslint']);
-	gulp.watch(src.allcss, ['cssmin']);
-	// gulp.watch(src.css_ab, ['csslint-ab']);
-	gulp.watch(src.css_ab, ['cssmin-ab']);
+	gulp.watch(src.css_all, ['stylelint']);
+	gulp.watch(src.css_all, ['cssnano']);
+	gulp.watch(src.css_ab, ['stylelint-ab']);
+	gulp.watch(src.css_ab, ['cssnano-ab']);
 	gulp.watch(src.js, ['jshint']);
 	gulp.watch(src.js, ['concat']);
 	gulp.watch(src.alljs, ['uglify']);
@@ -94,7 +99,7 @@ gulp.task('watch', function() {
 
 // build
 gulp.task('build', function(callback) {
-	runSequence('clean', 'sass', 'csslint', 'cssmin', 'csslint-ab', 'cssmin-ab', 'jshint', 'concat', 'uglify', callback);
+	runSequence('clean', 'sass', 'stylelint', 'cssnano', 'stylelint-ab', 'cssnano-ab', 'jshint', 'concat', 'uglify', callback);
 });
 
 // default

@@ -1,0 +1,77 @@
+{
+  "name": "execall",
+  "version": "1.0.0",
+  "description": "Find multiple RegExp matches in a string",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sindresorhus/execall.git"
+  },
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "regex",
+    "regexp",
+    "re",
+    "regular",
+    "expression",
+    "exec",
+    "match",
+    "matches",
+    "execall",
+    "all",
+    "find",
+    "findall",
+    "immutable",
+    "string",
+    "str",
+    "multiple",
+    "many",
+    "global"
+  ],
+  "dependencies": {
+    "clone-regexp": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  },
+  "gitHead": "18797f2b16558e1c6ef2c78e816e963fa632d0f9",
+  "bugs": {
+    "url": "https://github.com/sindresorhus/execall/issues"
+  },
+  "homepage": "https://github.com/sindresorhus/execall",
+  "_id": "execall@1.0.0",
+  "_shasum": "73d0904e395b3cab0658b08d09ec25307f29bb73",
+  "_from": "execall@>=1.0.0 <2.0.0",
+  "_npmVersion": "2.10.1",
+  "_nodeVersion": "0.12.4",
+  "_npmUser": {
+    "name": "sindresorhus",
+    "email": "sindresorhus@gmail.com"
+  },
+  "dist": {
+    "shasum": "73d0904e395b3cab0658b08d09ec25307f29bb73",
+    "tarball": "https://registry.npmjs.org/execall/-/execall-1.0.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "sindresorhus",
+      "email": "sindresorhus@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/execall/-/execall-1.0.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

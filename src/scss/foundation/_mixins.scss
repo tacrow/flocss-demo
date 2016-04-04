@@ -1,18 +1,13 @@
 @charset "utf-8";
-/*
- * foundation/_mixins.scss
- */
 
-/*
- * background-image base-path
- */
+// foundation/_mixins.scss
+
+// background-image base-path
 @mixin bg-img($path) {
 	background-image: url("../img/"+$path);
 }
 
-/*
- * color
- */
+// color
 $txt-white-color: #ffffff;
 
 $txt-base-color: #333333;
@@ -21,9 +16,7 @@ $link-base-color: #dfdfdf;
 
 $bg-base-color: #cccccc;
 
-/*
- * font-size
- */
+// font-size
 $font-size-base-px: 11px;
 $font-size-base-rem: 1.1rem;
 
@@ -100,9 +93,7 @@ $font-size-base-rem: 1.1rem;
 	font-size: 5rem;
 }
 
-/*
- * box-shadow
- */
+// box-shadow
 @mixin box-shadow($color) {
 	-webkit-box-shadow: 0 1px 2px $color;
 	-moz-box-shadow: 0 1px 2px $color;
