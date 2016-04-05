@@ -2,20 +2,9 @@
 /*
  * object/utility/_media_float.scss
  */
-.u-mdFlt {
-	overflow: hidden;
-}
-.u-mdFlt .u-mdL {
+.u-Flt-L {
 	float: left;
 }
-.u-mdFlt .u-mdR {
+.u-Flt-R {
 	float: right;
-}
-.mdFlt .mdL img,
-.mdFlt .mdR img {
-	display: block;
-}
-.u-mdFlt .u-otL,
-.u-mdFlt .u-otR {
-	overflow: hidden;
 }

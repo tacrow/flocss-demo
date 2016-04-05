@@ -12,19 +12,18 @@
 
 .p-news-title {
 	margin-bottom: 8px;
-	.p-news-title__logo {
-	}
 }
 
 .p-news-lists {
-	.p-news-lists__item {
-		margin-bottom: 10px;
-		.date {
-			display: inline-block;
-			margin-right: 10px;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
+
+}
+.p-news-lists__item {
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.date {
+		display: inline-block;
+		margin-right: 10px;
 	}
 }

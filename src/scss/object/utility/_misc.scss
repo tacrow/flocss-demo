@@ -25,7 +25,9 @@
 	-webkit-text-overflow: ellipsis;
 	text-overflow: ellipsis;
 }
-.u-breakAll { word-break: break-all; }
+.u-breakAll {
+	word-break: break-all;
+}
 
 /*
  * prevent callout
