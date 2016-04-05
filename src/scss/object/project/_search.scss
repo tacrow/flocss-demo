@@ -8,6 +8,9 @@
 	padding: 10px;
 	border: 1px solid #dfdfdf;
 	background-color: #ffffff;
+	.c-input-label--category:nth-child(6n) {
+		margin-right: 0;
+	}
 }
 .p-search__inputbox {
 
@@ -16,6 +19,12 @@
 .p-search-table {
 	width: 726px;
 	border: 1px solid #dfdfdf;
+}
+
+.p-search-btn-box {
+	.c-btn--search {
+		margin: 10px auto 0;
+	}
 }
 
 .p-search-group {
@@ -30,12 +39,14 @@
 	}
 	.p-search-group__inputlist {
 		padding-left: 10px;
+		&.p-search-group__inputlist--select {
+			padding: 5px 10px;
+		}
 	}
 }
 
 .p-search-footer {
-	width: 800px;
-	padding: 10px;
+	padding: 20px;
 	border: 1px solid #dfdfdf;
 	background-color: #ffffff;
 	box-sizing: border-box;
@@ -45,19 +56,22 @@
 	}
 	.p-search-footer__lists {
 		float: left;
-		width: 187px;
-		margin-right: 10px;
+		width: 243px;
+		margin-right: 20px;
 		&:last-child {
 			margin-right: 0;
 		}
 		.p-search-footer__lists__wrap {
 			padding-left: 5px;
 		}
-		.head {
+		.p-head {
 			margin-bottom: 10px;
 			padding: 5px;
 			background-color: #a5a5a5;
 			color: #ffffff;
+			&.p-head--stratum {
+				margin-top: 10px;
+			}
 		}
 	}
 }

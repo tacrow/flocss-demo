@@ -5,7 +5,9 @@
 // label
 .c-input-label {
 	display: inline-block;
+	min-width: 50px;
 	padding: 5px 10px 5px 0;
+	box-sizing: border-box;
 	@include font14;
 	&.c-input-label--radio {
 		padding: 5px 10px 5px 5px;
@@ -20,7 +22,6 @@
 		background-color: #ffffff;
 		box-sizing: border-box;
 		cursor: pointer;
-		&:nth-child(6n),
 		&:last-child {
 			margin-right: 0;
 		}
@@ -36,7 +37,7 @@
 	}
 	&.c-input-label--vertical {
 		display: block;
-		width: 187px;
+		width: 242px;
 		padding: 10px 20px;
 		margin-bottom: 10px;
 		border: 1px solid #dfdfdf;
@@ -87,7 +88,7 @@
 		background-color: #f8f1c9;
 	}
 	&.c-select--footer {
-		width: 187px;
+		width: 242px;
 		margin-bottom: 10px;
 		&:last-child {
 			margin-bottom: 0;

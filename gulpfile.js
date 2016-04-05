@@ -6,7 +6,8 @@ var $ = require('gulp-load-plugins')();
 var del = require('del');
 var sass = require('gulp-ruby-sass');
 var runSequence = require('run-sequence');
-var stylelint = [
+
+var plugins = [
 	require('stylelint'),
 	require('postcss-reporter')({ clearMessages: true })
 ];
@@ -38,12 +39,12 @@ gulp.task('sass', function() {
 });
 
 // css task
-gulp.task('stylelint', function() {
+gulp.task('postcss', function() {
 	return gulp.src(src.css_all)
 	.pipe($.plumber())
-	.pipe($.postcss(stylelint))
+	.pipe($.postcss(plugins))
 });
-gulp.task('cssnano', function() {
+gulp.task('postcss-cssnano', function() {
 	return gulp.src(src.css_all)
 	.pipe($.plumber())
 	.pipe($.postcss(cssnano))
@@ -52,12 +53,12 @@ gulp.task('cssnano', function() {
 });
 
 // css-ab task
-gulp.task('stylelint-ab', function() {
+gulp.task('postcss-ab', function() {
 	return gulp.src(src.css_ab)
 	.pipe($.plumber())
-	.pipe($.postcss(stylelint))
+	.pipe($.postcss(plugins))
 });
-gulp.task('cssnano-ab', function() {
+gulp.task('postcss-cssnano-ab', function() {
 	return gulp.src(src.css_ab)
 	.pipe($.plumber())
 	.pipe($.postcss(cssnano))
@@ -89,10 +90,10 @@ gulp.task('uglify', function() {
 // watch
 gulp.task('watch', function() {
 	gulp.watch(src.scss, ['sass']);
-	gulp.watch(src.css_all, ['stylelint']);
-	gulp.watch(src.css_all, ['cssnano']);
-	gulp.watch(src.css_ab, ['stylelint-ab']);
-	gulp.watch(src.css_ab, ['cssnano-ab']);
+	gulp.watch(src.css_all, ['postcss']);
+	gulp.watch(src.css_ab, ['postcss-ab']);
+	gulp.watch(src.css_all, ['postcss-cssnano']);
+	gulp.watch(src.css_ab, ['postcss-cssnano-ab']);
 	gulp.watch(src.js, ['jshint']);
 	gulp.watch(src.js, ['concat']);
 	gulp.watch(src.alljs, ['uglify']);
@@ -100,7 +101,7 @@ gulp.task('watch', function() {
 
 // build
 gulp.task('build', function(callback) {
-	runSequence('clean', 'sass', 'stylelint', 'cssnano', 'stylelint-ab', 'cssnano-ab', 'jshint', 'concat', 'uglify', callback);
+	runSequence('clean', 'sass', 'postcss', 'postcss-cssnano', 'postcss-ab', 'postcss-cssnano-ab', 'jshint', 'concat', 'uglify', callback);
 });
 
 // default
