@@ -12,20 +12,20 @@
 	background-position: center;
 }
 .p-top-kv__text {
-		display: inline-table;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: auto;
-		width: 600px;
-		color: #ffffff;
-		@include font30;
-		-webkit-text-shadow: 0 1px 3px rgba(0,0,0,.5);
-		text-shadow: 0 1px 3px rgba(0,0,0,.5);
-		text-align: center;
-	}
+	display: inline-table;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 600px;
+	color: #ffffff;
+	@include font30;
+	-webkit-text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	text-align: center;
+}
 
 .p-top-content {
 

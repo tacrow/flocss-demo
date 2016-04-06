@@ -1,17 +1,40 @@
 @charset "utf-8";
 /*
  * page-defのABスタイル
+ *
+ * Page-Def-AB1で使用する.scssファイルのセット
+ *
+ * ab/object/component/_heading.scss
+ * ab/object/component/_text.scss
+ * ab/object/project/_special.scss
+ *
  */
-
 // ===============================================================
 // Foundation
 // ===============================================================
+@import "../foundation/mixins";
 
+// --------------------------------------------
+// Reset
+// --------------------------------------------
+@import "../foundation/reset";
+
+// --------------------------------------------
+// Base
+// --------------------------------------------
+@import "../foundation/base";
 
 // ===============================================================
 // Layout
 // ===============================================================
 
+@import "../layout/core";
+@import "../layout/header";
+@import "../layout/footer";
+@import "../layout/content";
+@import "../layout/main";
+@import "../layout/grid";
+@import "../layout/modal";
 
 // ===============================================================
 // Object
@@ -19,31 +42,41 @@
 // --------------------------------------------
 // Component
 // --------------------------------------------
-.c-test {
-	display: block;
-}
+// ab/object/component/_heading.scss
+@import "object/component/ab1-heading";
+@import "../object/component/label";
+@import "../object/component/tab";
+@import "../object/component/media";
+@import "../object/component/search";
+@import "../object/component/form";
+@import "../object/component/link";
+// ab/object/component/_text.scss
+@import "object/component/ab1-text";
+@import "../object/component/button";
 
 // --------------------------------------------
 // Project
 // --------------------------------------------
-.p-test {
-	display: block;
-}
-
-.p-test2 {
-	display: block;
-	border: 1px solid #dfdfdf;
-}
+@import "../object/project/header";
+@import "../object/project/footer";
+@import "../object/project/top";
+@import "../object/project/main";
+@import "../object/project/news";
+@import "../object/project/gallery";
+@import "../object/project/search";
+// ab/object/project/_special.scss
+@import "object/project/ab1-special";
 
 // --------------------------------------------
 // Utility
 // --------------------------------------------
-.u-test {
-	display: block;
-}
-.u-test2 {
-	display: block;
-}
-.u-test3 {
-	color: #ffffff;
-}
+@import "../object/utility/typography";
+@import "../object/utility/dimension";
+@import "../object/utility/spaces";
+@import "../object/utility/display";
+@import "../object/utility/position";
+@import "../object/utility/state";
+@import "../object/utility/media_float";
+@import "../object/utility/clearfix";
+@import "../object/utility/img_replacement";
+@import "../object/utility/misc";

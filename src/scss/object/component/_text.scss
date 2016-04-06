@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*
+ * object/component/_textarea.scss
+ */
+
+.c-textbox {
+	margin-bottom: 10px;
+	@include font16;
+	line-height: 1.6em;
+}
+.c-textbox--last {
+	margin-bottom: 40px;
+}
+.c-textbox--note {
+	padding: 10px 0 20px 30px;
+	@include font14;
+}
+.c-textbox__link {
+	display: inline-block;
+	color: #128fdc;
+	text-decoration: underline;
+}

@@ -16,14 +16,13 @@ var cssnano = [
 ];
 
 var src = {
-	scss:   'src/scss/**/*.scss',
-	css:    'src/css/',
+	scss:    'src/scss/**/*.scss',
+	css:     'src/css/',
 	css_all: 'src/css/all.css',
-	css_ab: 'src/css/ab/*.css',
-	min_ab: 'src/css/ab/min/',
-	js:     'src/js/*.js',
-	alljs:  'src/js/all_js/all.js',
-	destjs: 'src/js/all_js/',
+	css_ab:  'src/css/ab/*.css',
+	js:      'src/js/*.js',
+	alljs:   'src/js/all_js/all.js',
+	destjs:  'src/js/all_js/',
 }
 
 // clean
@@ -40,7 +39,7 @@ gulp.task('sass', function() {
 
 // css task
 gulp.task('postcss', function() {
-	return gulp.src(src.css_all)
+	return gulp.src(src.css)
 	.pipe($.plumber())
 	.pipe($.postcss(plugins))
 });
@@ -63,7 +62,7 @@ gulp.task('postcss-cssnano-ab', function() {
 	.pipe($.plumber())
 	.pipe($.postcss(cssnano))
 	.pipe($.rename({ suffix: '.min' }))
-	.pipe(gulp.dest(src.min_ab));
+	.pipe(gulp.dest(src.css));
 });
 
 // js task
@@ -101,7 +100,18 @@ gulp.task('watch', function() {
 
 // build
 gulp.task('build', function(callback) {
-	runSequence('clean', 'sass', 'postcss', 'postcss-cssnano', 'postcss-ab', 'postcss-cssnano-ab', 'jshint', 'concat', 'uglify', callback);
+	runSequence(
+		'clean',
+		'sass',
+		'postcss',
+		'postcss-cssnano',
+		'postcss-ab',
+		'postcss-cssnano-ab',
+		'jshint',
+		'concat',
+		'uglify',
+		callback
+	);
 });
 
 // default
