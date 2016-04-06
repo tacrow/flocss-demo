@@ -1,0 +1,9 @@
+@charset "utf-8";
+/*
+ * ab/project/_special.scss
+ */
+.p-text-inner-lists__item--bold--ab1 {
+	color: #d9534f;
+	@include font18;
+	font-weight: bold;
+}

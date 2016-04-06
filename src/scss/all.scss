@@ -34,6 +34,7 @@
 // --------------------------------------------
 // Component
 // --------------------------------------------
+// default
 @import "object/component/heading";
 @import "object/component/label";
 @import "object/component/tab";
@@ -43,10 +44,14 @@
 @import "object/component/link";
 @import "object/component/text";
 @import "object/component/button";
+// ab1
+@import "object/component/ab1-heading";
+@import "object/component/ab1-text";
 
 // --------------------------------------------
 // Project
 // --------------------------------------------
+// default
 @import "object/project/header";
 @import "object/project/footer";
 @import "object/project/top";
@@ -55,6 +60,8 @@
 @import "object/project/gallery";
 @import "object/project/search";
 @import "object/project/special";
+// ab1
+@import "object/project/ab1-special";
 
 // --------------------------------------------
 // Utility

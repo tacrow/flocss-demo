@@ -2,20 +2,11 @@
 /*
  * object/component/_heading.scss
  */
-.c-heading {
-	margin-bottom: 10px;
-	@include font18;
-	font-weight: bold;
-}
 
-.p-heading--sub {
+.p-heading--sub--ab1 {
 	padding-top: 3px;
 	padding-left: 8px;
 	border-left: 5px solid #d9534f;
 	@include font20;
 	line-height: 1;
-}
-
-.c-heading--special {
-	@include font25;
 }

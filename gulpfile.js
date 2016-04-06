@@ -52,18 +52,18 @@ gulp.task('postcss-cssnano', function() {
 });
 
 // css-ab task
-gulp.task('postcss-ab', function() {
-	return gulp.src(src.css_ab)
-	.pipe($.plumber())
-	.pipe($.postcss(plugins))
-});
-gulp.task('postcss-cssnano-ab', function() {
-	return gulp.src(src.css_ab)
-	.pipe($.plumber())
-	.pipe($.postcss(cssnano))
-	.pipe($.rename({ suffix: '.min' }))
-	.pipe(gulp.dest(src.css));
-});
+// gulp.task('postcss-ab', function() {
+// 	return gulp.src(src.css_ab)
+// 	.pipe($.plumber())
+// 	.pipe($.postcss(plugins))
+// });
+// gulp.task('postcss-cssnano-ab', function() {
+// 	return gulp.src(src.css_ab)
+// 	.pipe($.plumber())
+// 	.pipe($.postcss(cssnano))
+// 	.pipe($.rename({ suffix: '.min' }))
+// 	.pipe(gulp.dest(src.css));
+// });
 
 // js task
 gulp.task('jshint', function() {
@@ -105,8 +105,8 @@ gulp.task('build', function(callback) {
 		'sass',
 		'postcss',
 		'postcss-cssnano',
-		'postcss-ab',
-		'postcss-cssnano-ab',
+		// 'postcss-ab',
+		// 'postcss-cssnano-ab',
 		'jshint',
 		'concat',
 		'uglify',
