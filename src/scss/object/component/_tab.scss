@@ -36,12 +36,12 @@
 		background-color: #ffffff;
 		font-weight: bold;
 	}
-	&.c-content-tab__target--close {
-		text-decoration: line-through;
-		opacity: .5;
-		cursor: auto;
-		&:hover {
-			background-color: #dfdfdf;
-		}
+}
+.c-content-tab__target--close {
+	text-decoration: line-through;
+	opacity: .5;
+	cursor: auto;
+	&:hover {
+		background-color: #dfdfdf;
 	}
 }

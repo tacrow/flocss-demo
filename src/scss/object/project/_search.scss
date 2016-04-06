@@ -33,16 +33,18 @@
 		border-bottom: 0 none;
 	}
 }
+
 .p-search-group__title {
 	width: 108px;
 	background-color: #a5a5a5;
 	color: #ffffff;
 }
+
 .p-search-group__inputlist {
 	padding-left: 10px;
-	&.p-search-group__inputlist--select {
-		padding: 5px 10px;
-	}
+}
+.p-search-group__inputlist--select {
+	padding: 5px 10px;
 }
 
 .p-search-footer {
@@ -66,12 +68,13 @@
 .p-search-footer__lists__wrap {
 	padding-left: 5px;
 }
+
 .p-search-footer-head {
 	margin-bottom: 10px;
 	padding: 5px;
 	background-color: #a5a5a5;
 	color: #ffffff;
-	&.p-search-footer-head--stratum {
-		margin-top: 10px;
-	}
+}
+.p-search-footer-head--stratum {
+	margin-top: 10px;
 }
