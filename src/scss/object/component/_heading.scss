@@ -19,3 +19,24 @@
 .c-heading--special {
 	@include font25;
 }
+
+.c-heading--side {
+	padding: 5px 8px;
+	background-color: #333333;
+	color: #ffffff;
+}
+
+.c-heading--ranking {
+	padding: 5px 8px;
+	background-color: #333333;
+	color: #ffffff;
+	&.is-rank1 {
+		background-color: #d3bc62;
+	}
+	&.is-rank2 {
+		background-color: #9e9e9e;
+	}
+	&.is-rank3 {
+		background-color: #ad673c;
+	}
+}

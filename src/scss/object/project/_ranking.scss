@@ -1,0 +1,18 @@
+@charset "utf-8";
+/*
+ * object/project/_ranking.scss
+ */
+
+.p-ranking-frame {
+	margin-bottom: 20px;
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+	background-color: #ffffff;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.p-ranking-body {
+	padding: 10px;
+}

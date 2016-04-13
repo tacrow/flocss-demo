@@ -24,6 +24,9 @@
 		-moz-transition: all .5s;
 		transition: all .5s;
 	}
+	&:hover {
+		opacity: 1;
+	}
 	.title,
 	.text {
 		color: #ffffff;

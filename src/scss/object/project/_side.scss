@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*
+ * object/project/_side.scss
+ */
+
+
+.p-side-block {
+	margin-bottom: 20px;
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+}
+
+.p-side-block-lists {
+	padding: 10px;
+}
+
+.p-side-block,
+.p-side-block-lists {
+	background-color: #ffffff;
+}
+
+.p-side-block-lists__item {
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

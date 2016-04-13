@@ -7,10 +7,11 @@ var del = require('del');
 var sass = require('gulp-ruby-sass');
 var runSequence = require('run-sequence');
 
-var plugins = [
+var stylelint = [
 	require('stylelint'),
 	require('postcss-reporter')({ clearMessages: true })
 ];
+
 var cssnano = [
 	require('cssnano')({ mergeRules: false })
 ];
@@ -38,10 +39,10 @@ gulp.task('sass', function() {
 });
 
 // css task
-gulp.task('postcss', function() {
+gulp.task('postcss-stylelint', function() {
 	return gulp.src(src.css)
 	.pipe($.plumber())
-	.pipe($.postcss(plugins))
+	.pipe($.postcss(stylelint))
 });
 gulp.task('postcss-cssnano', function() {
 	return gulp.src(src.css_all)
@@ -50,20 +51,6 @@ gulp.task('postcss-cssnano', function() {
 	.pipe($.rename({ suffix: '.min' }))
 	.pipe(gulp.dest(src.css));
 });
-
-// css-ab task
-// gulp.task('postcss-ab', function() {
-// 	return gulp.src(src.css_ab)
-// 	.pipe($.plumber())
-// 	.pipe($.postcss(plugins))
-// });
-// gulp.task('postcss-cssnano-ab', function() {
-// 	return gulp.src(src.css_ab)
-// 	.pipe($.plumber())
-// 	.pipe($.postcss(cssnano))
-// 	.pipe($.rename({ suffix: '.min' }))
-// 	.pipe(gulp.dest(src.css));
-// });
 
 // js task
 gulp.task('jshint', function() {
@@ -89,10 +76,8 @@ gulp.task('uglify', function() {
 // watch
 gulp.task('watch', function() {
 	gulp.watch(src.scss, ['sass']);
-	gulp.watch(src.css_all, ['postcss']);
-	gulp.watch(src.css_ab, ['postcss-ab']);
+	gulp.watch(src.css_all, ['postcss-stylelint']);
 	gulp.watch(src.css_all, ['postcss-cssnano']);
-	gulp.watch(src.css_ab, ['postcss-cssnano-ab']);
 	gulp.watch(src.js, ['jshint']);
 	gulp.watch(src.js, ['concat']);
 	gulp.watch(src.alljs, ['uglify']);
@@ -101,16 +86,8 @@ gulp.task('watch', function() {
 // build
 gulp.task('build', function(callback) {
 	runSequence(
-		'clean',
-		'sass',
-		'postcss',
-		'postcss-cssnano',
-		// 'postcss-ab',
-		// 'postcss-cssnano-ab',
-		'jshint',
-		'concat',
-		'uglify',
-		callback
+		'clean', 'sass', 'postcss-stylelint', 'postcss-cssnano',
+		'jshint', 'concat', 'uglify', callback
 	);
 });
 
