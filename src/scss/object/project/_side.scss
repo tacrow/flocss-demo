@@ -3,11 +3,9 @@
  * object/project/_side.scss
  */
 
-
 .p-side-block {
 	margin-bottom: 20px;
 	border: 1px solid #dfdfdf;
-	border-radius: 3px;
 }
 
 .p-side-block-lists {
@@ -16,6 +14,7 @@
 
 .p-side-block,
 .p-side-block-lists {
+	border-radius: 3px;
 	background-color: #ffffff;
 }
 

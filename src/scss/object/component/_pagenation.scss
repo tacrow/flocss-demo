@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*
+ * object/component/_pagenation.scss
+ */
+
+.c-pagenation {
+	text-align: center;
+}
+.c-pagenation {
+	width: 780px;
+}
+.c-pagenation_item {
+	display: inline-block;
+	margin-right: 5px;
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+	&:last-child {
+		margin-right: 0;
+	}
+	&.is-current {
+		a {
+			background-color: #cccccc;
+		}
+	}
+	a {
+		padding: 5px 10px;
+		background-color: #ffffff;
+		color: #333333;
+		@include font12;
+		&:hover {
+			background-color: #cccccc;
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			transition: all .5s;
+		}
+	}
+}
