@@ -8,7 +8,7 @@
 	min-width: 50px;
 	padding: 5px 10px 5px 0;
 	box-sizing: border-box;
-	@include font14;
+	@include fs14;
 }
 .c-input-label--radio {
 	padding: 5px 10px 5px 5px;
@@ -78,7 +78,7 @@
 	@include bg-img('parts/arrow-select.png');
 	background-repeat: no-repeat;
 	background-position: center right;
-	@include font12;
+	@include fs12;
 }
 .c-select--standard {
 	border: 1px solid #5eb9bc;
@@ -104,5 +104,5 @@
 	border: 1px solid #dfdfdf;
 	border-radius: 3px;
 	box-sizing: border-box;
-	@include font14;
+	@include fs14;
 }

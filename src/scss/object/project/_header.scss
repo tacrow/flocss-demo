@@ -28,7 +28,7 @@
 .p-header-nav-lists__item {
 	display: block;
 	float: left;
-	@include font12;
+	@include fs12;
 	a {
 		padding: 8px 15px;
 		color: #ffffff;
@@ -50,6 +50,5 @@
 	}
 	&.is-active span {
 		color: #128fdc;
-		font-weight: bold;
 	}
 }

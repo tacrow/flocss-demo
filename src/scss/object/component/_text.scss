@@ -5,7 +5,7 @@
 
 .c-textbox {
 	margin-bottom: 10px;
-	@include font16;
+	@include fs16;
 	line-height: 1.6em;
 }
 .c-textbox--last {
@@ -13,7 +13,7 @@
 }
 .c-textbox--note {
 	padding: 10px 0 20px 30px;
-	@include font14;
+	@include fs14;
 }
 .c-textbox__link {
 	display: inline-block;

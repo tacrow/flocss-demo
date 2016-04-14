@@ -18,7 +18,7 @@
 	height: 25px;
 	margin: auto;
 	color: #ffffff;
-	@include font30;
+	@include fs30;
 	font-weight: bold;
 	-webkit-text-shadow: 0 1px 3px rgba(0,0,0,.5);
 	text-shadow: 0 1px 3px rgba(0,0,0,.5);
@@ -36,12 +36,12 @@
 }
 .p-text-inner-lists__item {
 	margin-bottom: 10px;
-	@include font16;
+	@include fs16;
 	&:last-child {
 		margin-bottom: 0;
 	}
 }
 .p-text-inner-lists__item--bold {
-	@include font18;
+	@include fs18;
 	font-weight: bold;
 }

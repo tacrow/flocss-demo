@@ -8,7 +8,7 @@
 	border-radius: 2px;
 	background-color: #cccccc;
 	color: #ffffff;
-	@include font16;
+	@include fs16;
 	&:hover {
 		opacity: .7;
 		-webkit-transition: all 0.5s;

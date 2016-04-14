@@ -4,7 +4,7 @@
  */
 .c-heading {
 	margin-bottom: 10px;
-	@include font18;
+	@include fs18;
 	font-weight: bold;
 }
 
@@ -12,12 +12,12 @@
 	padding-top: 3px;
 	padding-left: 8px;
 	border-left: 5px solid #128fdc;
-	@include font20;
+	@include fs20;
 	line-height: 1;
 }
 
 .c-heading--special {
-	@include font25;
+	@include fs25;
 }
 
 .c-heading--side {

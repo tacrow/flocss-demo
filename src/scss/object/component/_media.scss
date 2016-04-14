@@ -33,13 +33,13 @@
 	}
 	.title {
 		margin-bottom: 5px;
-		@include font14;
+		@include fs14;
 		font-weight: bold;
 	}
 	.text {
 		min-height: 20px;
 		margin-bottom: 10px;
-		@include font11;
+		@include fs11;
 	}
 	.link {
 		width: 120px;

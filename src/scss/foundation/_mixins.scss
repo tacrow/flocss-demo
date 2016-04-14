@@ -20,79 +20,79 @@ $bg-base-color: #cccccc;
 $font-size-base-px: 11px;
 $font-size-base-rem: 1.1rem;
 
-@mixin font($font-size:$font-size-base-px) {
+@mixin fs($font-size:$font-size-base-px) {
 	font-size: $font-size;
 	font-size: ($font-size / 10)rem;
 }
-@mixin font-base {
+@mixin fs-base {
 	font-size: $font-size-base-px;
 	font-size: $font-size-base-rem;
 }
-@mixin font8 {
+@mixin fs8 {
 	font-size: 8px;
 	font-size: .8rem;
 }
-@mixin font9 {
+@mixin fs9 {
 	font-size: 9px;
 	font-size: .9rem;
 }
-@mixin font10 {
+@mixin fs10 {
 	font-size: 1px;
 	font-size: 1rem;
 }
-@mixin font11 {
+@mixin fs11 {
 	font-size: 11px;
 	font-size: 1.1rem;
 }
-@mixin font12 {
+@mixin fs12 {
 	font-size: 12px;
 	font-size: 1.2rem;
 }
-@mixin font13 {
+@mixin fs13 {
 	font-size: 13px;
 	font-size: 1.3rem;
 }
-@mixin font14 {
+@mixin fs14 {
 	font-size: 14px;
 	font-size: 1.4rem;
 }
-@mixin font15 {
+@mixin fs15 {
 	font-size: 15px;
 	font-size: 1.5rem;
 }
-@mixin font16 {
+@mixin fs16 {
 	font-size: 16px;
 	font-size: 1.6rem;
 }
-@mixin font17 {
+@mixin fs17 {
 	font-size: 17px;
 	font-size: 1.7rem;
 }
-@mixin font18 {
+@mixin fs18 {
 	font-size: 18px;
 	font-size: 1.8rem;
 }
-@mixin font20 {
+@mixin fs20 {
 	font-size: 20px;
 	font-size: 2rem;
 }
-@mixin font25 {
+@mixin fs25 {
 	font-size: 25px;
 	font-size: 2.5rem;
 }
-@mixin font30 {
+@mixin fs30 {
 	font-size: 30px;
 	font-size: 3rem;
 }
-@mixin font35 {
+@mixin fs35 {
 	font-size: 35px;
 	font-size: 3.5rem;
 }
-@mixin font40 {
+@mixin fs40 {
 	font-size: 40px;
 	font-size: 4rem;
 }
-@mixin font50 {
+@mixin fs50 {
 	font-size: 50px;
 	font-size: 5rem;
 }

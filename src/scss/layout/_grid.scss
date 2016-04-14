@@ -22,7 +22,7 @@
 		margin-right: 5px;
 		background-color: #a5a5a5;
 		color: $txt-white-color;
-		@include font14;
+		@include fs14;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -75,7 +75,7 @@
 		margin-right: 10px;
 		background-color: #a5a5a5;
 		color: $txt-white-color;
-		@include font14;
+		@include fs14;
 		&:last-child {
 			margin-right: 0;
 		}

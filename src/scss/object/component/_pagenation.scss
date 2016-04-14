@@ -4,10 +4,9 @@
  */
 
 .c-pagenation {
-	text-align: center;
-}
-.c-pagenation {
 	width: 780px;
+	padding: 50px 0;
+	text-align: center;
 }
 .c-pagenation_item {
 	display: inline-block;
@@ -20,13 +19,15 @@
 	&.is-current {
 		a {
 			background-color: #cccccc;
+			cursor: default;
 		}
 	}
 	a {
 		padding: 5px 10px;
+		border-radius: 3px;
 		background-color: #ffffff;
 		color: #333333;
-		@include font12;
+		@include fs12;
 		&:hover {
 			background-color: #cccccc;
 			-webkit-transition: all .5s;
