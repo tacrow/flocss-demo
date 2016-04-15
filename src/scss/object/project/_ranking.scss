@@ -14,5 +14,40 @@
 }
 
 .p-ranking-body {
-	padding: 10px;
+	padding: 0 10px 10px;
+}
+
+.p-ranking-body__detail {
+	float: left;
+	width: 205px;
+}
+
+.p-ranking-body__kv {
+	float: right;
+	width: 540px;
+}
+
+.p-ranking-star {
+	padding: 5px 0;
+	.p-ranking-star__text {
+		color: #333333;
+		@include fs12;
+		font-weight: bold;
+	}
+	.p-ranking-star__star {
+		img {
+			vertical-align: top;
+			width: 14px;
+		}
+	}
+	.p-ranking-star__num {
+		color: #f44027;
+		@include fs14;
+		font-weight: bold;
+	}
+}
+.p-ranking-body__kuchikomi {
+	@include fs12;
+	font-weight: bold;
+	text-decoration: underline;
 }

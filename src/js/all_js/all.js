@@ -61,5 +61,32 @@
 		});
 	}
 
+	// slider
+	// var sliderPointer = '#js-slider_pointer';
+	// var $sliderPointer = $(sliderPointer);
+	// var sliderBarLeft = '#js-slider_bar_left';
+	// var $sliderBarLeft = $(sliderBarLeft);
+	// var sliderBarRight = '#js-slider_bar_right';
+	// var $sliderBarRight = $(sliderBarRight);
+	// var dragging = false;
+
+	// $DOC.on('mousedown', sliderPointer, function(event) {
+	// 	dragging = true;
+	// 	onMouseMove();
+	// });
+
+	// $DOC.on('mouseup', sliderPointer, function(event) {
+	// 	if (dragging) {
+	// 		dragging = false;
+	// 	}
+	// });
+
+	// var onMouseMove = function() {
+	// 	$DOC.on('mousemove', sliderPointer, function(event) {
+	// 		var pointer = event.clientY;
+	// 		$sliderPointer.css("left", pointer)
+	// 	});
+	// }
+
 })();
 

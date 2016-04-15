@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*
+ * object/component/_table.scss
+ */
+.c-table {
+	width: 100%;
+	border: 1px solid #dfdfdf;
+}
+.c-table__thead {
+	th {
+		padding: 5px 10px;
+		background-color: #f4f4f4;
+		text-align: left;
+		border-right: 1px solid #dfdfdf;
+		&:last-child {
+			border-right: 0 none;
+		}
+	}
+}
+.c-table__tbody {
+	td {
+		padding: 5px 10px;
+		text-align: left;
+		border-right: 1px solid #dfdfdf;
+		&:last-child {
+			border-right: 0 none;
+		}
+	}
+}
