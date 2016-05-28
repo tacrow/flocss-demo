@@ -1,26 +1,24 @@
 (function() {
-	console.log('common.js');
-
 	var $DOC = $(document);
 
-	var body  = 'body, html';
-	var $body = $(body);
+	var body  = 'body, html',
+		$body = $(body);
 
-	var pageMain  = '#page-main';
-	var $pageMain = $(pageMain);
+	var pageMain  = '#page-main',
+		$pageMain = $(pageMain);
 
-	var pageForm  = '#page-form';
-	var $pageForm = $(pageForm);
+	var pageForm  = '#page-form',
+		$pageForm = $(pageForm);
 
 	if($pageMain.length > 0) {
-		var listCnt  = '.js-cnt-list';
-		var $listCnt = $(listCnt);
-		var link  = '.js-link';
-		var $link = $(link);
-		var btnCloseModal  = '.js-btn-close-modal';
-		var $btnCloseModal = $(btnCloseModal);
-		var blackLayer  = '.js-black-layer';
-		var $blackLayer = $(blackLayer);
+		var listCnt  = '.js-cnt-list',
+			$listCnt = $(listCnt);
+		var link  = '.js-link',
+			$link = $(link);
+		var btnCloseModal  = '.js-btn-close-modal',
+			$btnCloseModal = $(btnCloseModal);
+		var blackLayer  = '.js-black-layer',
+			$blackLayer = $(blackLayer);
 		var data;
 		var $modal;
 		var $target;
@@ -51,42 +49,21 @@
 	}
 
 	if($pageForm.length > 0) {
-		var checkbox = '.js-checkbox';
-		var $checkbox = $(checkbox);
-		var label = '.c-input-label'
-		var $label = $(label);
+		var checkbox = '.js-checkbox',
+			$checkbox = $(checkbox);
+		var label = '.c-input-label',
+			$label = $(label);
 
 		$DOC.on('click', checkbox, function() {
 			$(this).closest('.c-input-label').toggleClass('is-active');
 		});
 	}
 
-	// slider
-	// var sliderPointer = '#js-slider_pointer';
-	// var $sliderPointer = $(sliderPointer);
-	// var sliderBarLeft = '#js-slider_bar_left';
-	// var $sliderBarLeft = $(sliderBarLeft);
-	// var sliderBarRight = '#js-slider_bar_right';
-	// var $sliderBarRight = $(sliderBarRight);
-	// var dragging = false;
-
-	// $DOC.on('mousedown', sliderPointer, function(event) {
-	// 	dragging = true;
-	// 	onMouseMove();
-	// });
-
-	// $DOC.on('mouseup', sliderPointer, function(event) {
-	// 	if (dragging) {
-	// 		dragging = false;
-	// 	}
-	// });
-
-	// var onMouseMove = function() {
-	// 	$DOC.on('mousemove', sliderPointer, function(event) {
-	// 		var pointer = event.clientY;
-	// 		$sliderPointer.css("left", pointer)
-	// 	});
-	// }
+	// widget
+	var sampleWidget = '.sample-widget',
+		$sampleWidget = $(sampleWidget);
+	$sampleWidget.css('border', '0 none');
 
 })();
+
 
