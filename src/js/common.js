@@ -58,11 +58,5 @@
 			$(this).closest('.c-input-label').toggleClass('is-active');
 		});
 	}
-
-	// widget
-	var sampleWidget = '.sample-widget',
-		$sampleWidget = $(sampleWidget);
-	$sampleWidget.css('border', '0 none');
-
 })();
 
