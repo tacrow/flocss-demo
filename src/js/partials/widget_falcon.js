@@ -5,15 +5,16 @@
 	var iframeResize = function() {
 		// ページの高さを取得
 		var PageHight = document.body.scrollHeight + 0;
-		if($inputWrapSub.hasClass('is-open')) {
+		if($uiListPair.hasClass('is-open')) {
 			PageHight = document.body.scrollHeight + 0;
 		} else {
 			PageHight = document.getElementById('page-contents').scrollHeight + 0;
 		}
 		// iframeの高さを変更
-		window.parent.document.getElementById('widget-shark').style.height = PageHight + 'px';
+		window.parent.document.getElementById('widget-falcon').style.height = PageHight + 'px';
 	};
 	window.onload = iframeResize;
+
 
 	var pickupRadio  = '.js-pickup_radio',
 		$pickupRadio = $(pickupRadio);
@@ -47,19 +48,21 @@
 		}
 	});
 
-	var triggerToggle  = '#js-trigger-toggle',
-		$triggerToggle = $(triggerToggle);
-	var inputWrapSub  = '#js-input-wrap--sub',
-		$inputWrapSub = $(inputWrapSub);
+	var btnToggle  = '.js-btn-toggle',
+		$btnToggle = $(btnToggle);
+	var uiListPair = '.js-ui-list--pair',
+		$uiListPair = $(uiListPair);
 
-	$triggerToggle.on('click', function() {
-		$inputWrapSub.toggleClass('is-open');
-		if($inputWrapSub.hasClass('is-open')) {
-			$triggerToggle.text('▲ 追加条件を閉じる');
+	$btnToggle.on('click', function() {
+		$uiListPair.toggleClass('is-open');
+		if($uiListPair.hasClass('is-open')) {
+			$btnToggle.text('ペアを閉じる');
 		} else {
-			$triggerToggle.text('+ さらに条件をくわえる');
+			$btnToggle.text('ペアを開く');
 		}
-		iframeResize();
+		setTimeout(function(){
+			iframeResize();
+		}, 300);
 	});
 
 	var form = $('#widget-form form');

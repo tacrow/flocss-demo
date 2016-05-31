@@ -11,7 +11,7 @@
 			PageHight = document.getElementById('page-contents').scrollHeight + 0;
 		}
 		// iframeの高さを変更
-		window.parent.document.getElementById('widget-shark').style.height = PageHight + 'px';
+		window.parent.document.getElementById('widget-wolf').style.height = PageHight + 'px';
 	};
 	window.onload = iframeResize;
 

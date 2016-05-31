@@ -14,7 +14,7 @@ html, body {
 .title-widget {
 	max-width: 100%;
 	padding: 10px 0 8px 10px;
-	background-color: #5eb9bc;
+	background-color: #ff7e0e;
 	border-bottom: 1px solid #dfdfdf;
 	color: #ffffff;
 	@include fs16;
@@ -63,7 +63,7 @@ html, body {
 
 .item-title {
 	float: left;
-	background-color: #5eb9bc;
+	background-color: #ff7e0e;
 	h3 {
 		display: table-cell;
 		vertical-align: middle;
@@ -121,56 +121,16 @@ html, body {
 	.input-wrap {
 		&.input-wrap--sub {
 			display: none;
+			// height: 31px;
+			// -webkit-transition: .3s all;
+			// transition: .3s all;
 			&.is-open {
 				display: block;
-				-webkit-animation: show 1s;
-				-moz-animation: show 1s;
-				animation: show 1s;
+				// height: 124px;
+				// -webkit-transition: .3s all;
+				// transition: .3s all;
 			}
 		}
-	}
-}
-
-@-webkit-keyframes show {
-	0% {
-		display: none;
-		opacity: 0;
-	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
-	100% {
-		display: block;
-		opacity: 1;
-	}
-}
-@-moz-keyframes show {
-	0% {
-		display: none;
-		opacity: 0;
-	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
-	100% {
-		display: block;
-		opacity: 1;
-	}
-}
-@keyframes show {
-	0% {
-		display: none;
-		opacity: 0;
-	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
-	100% {
-		display: block;
-		opacity: 1;
 	}
 }
 
