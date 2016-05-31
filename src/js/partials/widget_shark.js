@@ -6,7 +6,7 @@
 		// ページの高さを取得
 		var PageHight = document.body.scrollHeight + 0;
 		// iframeの高さを変更
-		window.parent.document.getElementById('sample-widget').style.height = PageHight + 'px';
+		window.parent.document.getElementById('widget-shark').style.height = PageHight + 'px';
 	};
 	window.onload = iframeResize;
 
